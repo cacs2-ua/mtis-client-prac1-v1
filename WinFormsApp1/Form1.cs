@@ -1,3 +1,4 @@
+using ServiceReference1;
 using System.Net;
 using System.Text;
 
@@ -45,71 +46,52 @@ namespace WinFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             // Paso 1: Obtener los textos de los TextBox en el orden indicado
             string nifnie = textBox1.Text.Trim();
-            string codigoSala = textBox2.Text.Trim();
-            string codigoDispositivo = textBox3.Text.Trim();
+            string codigoSalaStr = textBox2.Text.Trim();
+            string codigoDispositivoStr = textBox3.Text.Trim();
             string WSKey = textBox4.Text.Trim();
 
-            // Construir el SOAP envelope como string con los valores leídos
-            string soapEnvelope = $@"<?xml version=""1.0"" encoding=""UTF-8""?>
-<soapenv:Envelope xmlns:soapenv=""http://schemas.xmlsoap.org/soap/envelope/"" xmlns:con=""http://www.example.org/ControlAccesos/"">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <con:registrar>
-         <in>
-            <nifnie>{nifnie}</nifnie>
-            <codigoSala>{codigoSala}</codigoSala>
-            <codigoDispositivo>{codigoDispositivo}</codigoDispositivo>
-            <WSKey>{WSKey}</WSKey>
-         </in>
-      </con:registrar>
-   </soapenv:Body>
-</soapenv:Envelope>";
+            // Convertir a enteros (se asume que codigoSala y codigoDispositivo son numéricos)
+            if (!int.TryParse(codigoSalaStr, out int codigoSala))
+            {
+                MessageBox.Show("El código de sala no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            // Endpoint SOAP
-            string url = "http://localhost:8080/Prac1-prueba-v2/services/ControlAccesos";
+            if (!int.TryParse(codigoDispositivoStr, out int codigoDispositivo))
+            {
+                MessageBox.Show("El código de dispositivo no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Paso 2: Crear el objeto de request (RegistroAccesosType)
+            var registro = new RegistroAccesosType
+            {
+                nifnie = nifnie,
+                codigoSala = codigoSala,
+                codigoDispositivo = codigoDispositivo,
+                WSKey = WSKey
+            };
 
             try
             {
-                // Crear la solicitud HTTP (POST) para el servicio SOAP
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-                request.Method = "POST";
-                request.ContentType = "text/xml;charset=UTF-8";
-                request.Accept = "text/xml";
-
-                // Convertir el envelope a bytes y escribirlo en el stream de la solicitud
-                byte[] byteArray = Encoding.UTF8.GetBytes(soapEnvelope);
-                request.ContentLength = byteArray.Length;
-                using (Stream reqStream = request.GetRequestStream())
+                // Paso 3: Crear el cliente SOAP y llamar a la operación registrarAsync
+                using (var client = new ControlAccesosClient())
                 {
-                    reqStream.Write(byteArray, 0, byteArray.Length);
-                }
+                    // Llamada asíncrona a la operación registrar con el objeto registro
+                    var response = await client.registrarAsync(registro);
 
-                // Obtener la respuesta del servicio SOAP
-                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                {
-                    string soapResult = reader.ReadToEnd();
-
-                    // Mostrar el resultado en un MessageBox o en otro control
-                    MessageBox.Show("Respuesta SOAP:\n" + soapResult, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (WebException webEx)
-            {
-                // Si hay error en la llamada SOAP, se muestra el error
-                using (StreamReader reader = new StreamReader(webEx.Response.GetResponseStream()))
-                {
-                    string errorResponse = reader.ReadToEnd();
-                    MessageBox.Show("Error en la llamada SOAP:\n" + errorResponse, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Mostrar la respuesta (response.@out contiene el mensaje de salida)
+                    MessageBox.Show("Respuesta SOAP:\n" + response.@out, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error inesperado:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // En caso de error se muestra el mensaje de error
+                MessageBox.Show("Error en la llamada SOAP:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
