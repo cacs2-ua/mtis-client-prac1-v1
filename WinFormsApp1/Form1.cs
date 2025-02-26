@@ -50,10 +50,8 @@ namespace WinFormsApp1
             // Paso 1: Obtener los textos de los TextBox en el orden indicado
             string nifnie = textBox1.Text.Trim();
             string codigoSala = textBox2.Text.Trim();
-            string codigoDispositivo = textBox13.Text.Trim();
-
-            // WSKey se asume que es fijo según la especificación
-            string WSKey = "soap-mtis-prac1";
+            string codigoDispositivo = textBox3.Text.Trim();
+            string WSKey = textBox4.Text.Trim();
 
             // Construir el SOAP envelope como string con los valores leídos
             string soapEnvelope = $@"<?xml version=""1.0"" encoding=""UTF-8""?>
