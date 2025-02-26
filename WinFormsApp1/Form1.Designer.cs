@@ -102,6 +102,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(303, 27);
             textBox1.TabIndex = 8;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -146,7 +147,7 @@
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 13;
-            button1.Text = "Enviar";
+            button1.Text = "Registrar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
