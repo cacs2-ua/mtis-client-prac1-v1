@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9GlZlAAfLFk=",
+  "dgSpecHash": "JQ851rgVKRU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cris-SX\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\WinFormsApp1\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cris-SX\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Cris-SX\\.nuget\\packages\\microsoft.extensions.objectpool\\6.0.16\\microsoft.extensions.objectpool.6.0.16.nupkg.sha512",

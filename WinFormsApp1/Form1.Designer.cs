@@ -44,8 +44,6 @@
             button1 = new Button();
             label19 = new Label();
             textBox3 = new TextBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
             contextMenuStrip2.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -145,7 +143,7 @@
             // button1
             // 
             button1.BackColor = SystemColors.ButtonShadow;
-            button1.Location = new Point(576, 348);
+            button1.Location = new Point(576, 291);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 13;
@@ -171,29 +169,11 @@
             textBox3.TabIndex = 44;
             textBox3.TextChanged += textBox13_TextChanged;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(266, 295);
-            label4.Name = "label4";
-            label4.Size = new Size(55, 20);
-            label4.TabIndex = 47;
-            label4.Text = "WSKey";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(367, 292);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(303, 27);
-            textBox4.TabIndex = 46;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1001, 408);
-            Controls.Add(label4);
-            Controls.Add(textBox4);
             Controls.Add(label19);
             Controls.Add(textBox3);
             Controls.Add(button1);
@@ -230,7 +210,5 @@
         private Button button1;
         private Label label19;
         private TextBox textBox3;
-        private Label label4;
-        private TextBox textBox4;
     }
 }

@@ -52,7 +52,17 @@ namespace WinFormsApp1
             string nifnie = textBox1.Text.Trim();
             string codigoSalaStr = textBox2.Text.Trim();
             string codigoDispositivoStr = textBox3.Text.Trim();
-            string WSKey = textBox4.Text.Trim();
+
+            // Paso 1.1: Leer la WSKey desde el archivo de texto en la carpeta "resources"
+            string wsKeyFilePath = System.IO.Path.Combine(Application.StartupPath, "resources", "wskey.txt");
+
+            if (!System.IO.File.Exists(wsKeyFilePath))
+            {
+                MessageBox.Show("El archivo wskey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string WSKey = System.IO.File.ReadAllText(wsKeyFilePath).Trim();
 
             // Convertir a enteros (se asume que codigoSala y codigoDispositivo son numéricos)
             if (!int.TryParse(codigoSalaStr, out int codigoSala))
@@ -81,19 +91,18 @@ namespace WinFormsApp1
                 // Paso 3: Crear el cliente SOAP y llamar a la operación registrarAsync
                 using (var client = new ControlAccesosClient())
                 {
-                    // Llamada asíncrona a la operación registrar con el objeto registro
                     var response = await client.registrarAsync(registro);
 
-                    // Mostrar la respuesta (response.@out contiene el mensaje de salida)
+                    // Mostrar la respuesta
                     MessageBox.Show("Respuesta SOAP:\n" + response.@out, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                // En caso de error se muestra el mensaje de error
                 MessageBox.Show("Error en la llamada SOAP:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
