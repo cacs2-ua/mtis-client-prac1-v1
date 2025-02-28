@@ -9,6 +9,13 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
+            this.AutoScroll = true;
+            this.WindowState = FormWindowState.Maximized;
+            this.HorizontalScroll.Enabled = false;
+            this.HorizontalScroll.Visible = false;
+            panelContenedor.HorizontalScroll.Enabled = false;
+            panelContenedor.HorizontalScroll.Visible = false;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -45,6 +52,8 @@ namespace WinFormsApp1
         {
 
         }
+
+        /*
 
         private async void button1_Click(object sender, EventArgs e)
         {
@@ -102,14 +111,9 @@ namespace WinFormsApp1
                 MessageBox.Show("Error en la llamada SOAP:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        */
 
         private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void aaaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -122,6 +126,54 @@ namespace WinFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Limpia el contenido anterior del panel
+            panelContenedor.Controls.Clear();
+
+            // Crea una nueva instancia del UserControl correspondiente
+            ucEmpleados uc = new ucEmpleados();
+
+            // Ajusta el ancho del UserControl para que sea exactamente el mismo que el del panel
+            uc.Width = panelContenedor.ClientSize.Width;
+
+            // Opcional: anclar el control a la esquina superior izquierda para que se mantenga en su posición
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            // Agrega el UserControl al panel
+            panelContenedor.Controls.Add(uc);
+
+        }
+
+        private void ControlAccesosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Limpia el contenido anterior del panel
+            panelContenedor.Controls.Clear();
+
+            // Crea una nueva instancia del UserControl correspondiente
+            ucControlAccesos uc = new ucControlAccesos();
+
+            // Ajusta el ancho del UserControl para que sea exactamente el mismo que el del panel
+            uc.Width = panelContenedor.ClientSize.Width;
+
+            // Opcional: anclar el control a la esquina superior izquierda para que se mantenga en su posición
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+            // Agrega el UserControl al panel
+            panelContenedor.Controls.Add(uc);
+
+        }
+
+        private void ControlPresenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelContenedor.Controls.Clear();
+
+            ucControlPresencia uc = new ucControlPresencia();
+            uc.Width = panelContenedor.ClientSize.Width;
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            panelContenedor.Controls.Add(uc);
         }
     }
 }

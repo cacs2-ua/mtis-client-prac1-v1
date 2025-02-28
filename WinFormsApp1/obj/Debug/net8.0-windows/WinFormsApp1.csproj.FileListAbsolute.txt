@@ -221,3 +221,6 @@ C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-clien
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucControlAccesos.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucControlPresencia.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucEmpleados.resources
