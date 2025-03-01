@@ -175,5 +175,41 @@ namespace WinFormsApp1
             uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             panelContenedor.Controls.Add(uc);
         }
+
+        private void salasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nivelesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelContenedor.Controls.Clear();
+
+            ucNiveles uc = new ucNiveles();
+            uc.Width = panelContenedor.ClientSize.Width;
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            panelContenedor.Controls.Add(uc);
+
+        }
+
+        private void dispositivosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

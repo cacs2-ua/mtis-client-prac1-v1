@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ALL-clientes-open-api\v4-cliente-openapi\src\IO.Swagger\IO.Swagger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="resources\wskey.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

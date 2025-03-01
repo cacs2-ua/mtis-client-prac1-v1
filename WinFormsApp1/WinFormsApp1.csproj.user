@@ -13,5 +13,8 @@
     <Compile Update="ucControlPresencia.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucNiveles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

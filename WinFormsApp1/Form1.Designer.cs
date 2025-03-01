@@ -36,6 +36,10 @@
             EmpleadosToolStripMenuItem = new ToolStripMenuItem();
             ControlAccesosToolStripMenuItem = new ToolStripMenuItem();
             ControlPresenciaToolStripMenuItem = new ToolStripMenuItem();
+            salasToolStripMenuItem = new ToolStripMenuItem();
+            nivelesToolStripMenuItem = new ToolStripMenuItem();
+            dispositivosToolStripMenuItem = new ToolStripMenuItem();
+            notificacionesToolStripMenuItem = new ToolStripMenuItem();
             panelContenedor = new Panel();
             label1 = new Label();
             contextMenuStrip2.SuspendLayout();
@@ -65,7 +69,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { EmpleadosToolStripMenuItem, ControlAccesosToolStripMenuItem, ControlPresenciaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { EmpleadosToolStripMenuItem, ControlAccesosToolStripMenuItem, ControlPresenciaToolStripMenuItem, salasToolStripMenuItem, nivelesToolStripMenuItem, dispositivosToolStripMenuItem, notificacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1902, 28);
@@ -93,6 +97,34 @@
             ControlPresenciaToolStripMenuItem.Text = "ControlPresencia";
             ControlPresenciaToolStripMenuItem.Click += ControlPresenciaToolStripMenuItem_Click;
             // 
+            // salasToolStripMenuItem
+            // 
+            salasToolStripMenuItem.Name = "salasToolStripMenuItem";
+            salasToolStripMenuItem.Size = new Size(57, 24);
+            salasToolStripMenuItem.Text = "Salas";
+            salasToolStripMenuItem.Click += salasToolStripMenuItem_Click;
+            // 
+            // nivelesToolStripMenuItem
+            // 
+            nivelesToolStripMenuItem.Name = "nivelesToolStripMenuItem";
+            nivelesToolStripMenuItem.Size = new Size(71, 24);
+            nivelesToolStripMenuItem.Text = "Niveles";
+            nivelesToolStripMenuItem.Click += nivelesToolStripMenuItem_Click;
+            // 
+            // dispositivosToolStripMenuItem
+            // 
+            dispositivosToolStripMenuItem.Name = "dispositivosToolStripMenuItem";
+            dispositivosToolStripMenuItem.Size = new Size(103, 24);
+            dispositivosToolStripMenuItem.Text = "Dispositivos";
+            dispositivosToolStripMenuItem.Click += dispositivosToolStripMenuItem_Click;
+            // 
+            // notificacionesToolStripMenuItem
+            // 
+            notificacionesToolStripMenuItem.Name = "notificacionesToolStripMenuItem";
+            notificacionesToolStripMenuItem.Size = new Size(118, 24);
+            notificacionesToolStripMenuItem.Text = "Notificaciones";
+            notificacionesToolStripMenuItem.Click += notificacionesToolStripMenuItem_Click;
+            // 
             // panelContenedor
             // 
             panelContenedor.Controls.Add(label1);
@@ -100,6 +132,7 @@
             panelContenedor.Name = "panelContenedor";
             panelContenedor.Size = new Size(1902, 1002);
             panelContenedor.TabIndex = 46;
+            panelContenedor.Paint += panelContenedor_Paint;
             // 
             // label1
             // 
@@ -111,6 +144,7 @@
             label1.Size = new Size(312, 46);
             label1.TabIndex = 0;
             label1.Text = "MTIS-Cliente-SOAP";
+            label1.Click += label1_Click_2;
             // 
             // Form1
             // 
@@ -142,5 +176,9 @@
         private ToolStripMenuItem ControlPresenciaToolStripMenuItem;
         private Panel panelContenedor;
         private Label label1;
+        private ToolStripMenuItem salasToolStripMenuItem;
+        private ToolStripMenuItem nivelesToolStripMenuItem;
+        private ToolStripMenuItem dispositivosToolStripMenuItem;
+        private ToolStripMenuItem notificacionesToolStripMenuItem;
     }
 }
