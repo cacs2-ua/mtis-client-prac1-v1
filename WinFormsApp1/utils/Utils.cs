@@ -11,14 +11,14 @@ namespace WinFormsApp1.utils
 {
     public static class Utils
     {
-        public static String obtenerWSKey()
+        public static String obtenerSoapKey()
         {
-            string projectPath = Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName;
-            string wsKeyFilePath = Path.Combine(projectPath, "resources", "wskey.txt");
+            string projectPath = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName).FullName;
+            string wsKeyFilePath = Path.Combine(projectPath, "resources", "soapkey.txt");
 
             if (!System.IO.File.Exists(wsKeyFilePath))
             {
-                MessageBox.Show("El archivo wskey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El archivo soapkey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "WSKey not Found";
             }
 
@@ -30,11 +30,11 @@ namespace WinFormsApp1.utils
         public static String obtenerRestKey()
         {
             string projectPath = Directory.GetParent(Directory.GetParent(Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName).FullName).FullName;
-            string wsKeyFilePath = Path.Combine(projectPath, "resources", "wskey.txt");
+            string wsKeyFilePath = Path.Combine(projectPath, "resources", "restkey.txt");
 
             if (!System.IO.File.Exists(wsKeyFilePath))
             {
-                MessageBox.Show("El archivo wskey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El archivo restkey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "WSKey not Found";
             }
 

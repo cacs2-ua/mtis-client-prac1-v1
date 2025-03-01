@@ -18,11 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ALL-clientes-open-api\v4-cliente-openapi\src\IO.Swagger\IO.Swagger.csproj" />
+    <ProjectReference Include="..\..\ALL-clientes-open-api\v5-cliente-openapi\src\IO.Swagger.Test\IO.Swagger.Test.csproj" />
+    <ProjectReference Include="..\..\ALL-clientes-open-api\v5-cliente-openapi\src\IO.Swagger\IO.Swagger.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="resources\wskey.txt">
+    <None Update="resources\restkey.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="resources\soapkey.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

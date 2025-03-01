@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using ServiceReference1;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+using WinFormsApp1.utils;
+
 namespace WinFormsApp1
 {
     public partial class ucControlAccesos : UserControl
@@ -26,16 +28,7 @@ namespace WinFormsApp1
             string codigoSalaStr = codigoSalaTextBox.Text.Trim();
             string codigoDispositivoStr = codigoDispositivoTextBox.Text.Trim();
 
-            // Paso 1.1: Leer la WSKey desde el archivo de texto en la carpeta "resources"
-            string wsKeyFilePath = System.IO.Path.Combine(Application.StartupPath, "resources", "wskey.txt");
-
-            if (!System.IO.File.Exists(wsKeyFilePath))
-            {
-                MessageBox.Show("El archivo wskey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string WSKey = System.IO.File.ReadAllText(wsKeyFilePath).Trim();
+            string WSKey = Utils.obtenerSoapKey();
 
             // Convertir a enteros (se asume que codigoSala y codigoDispositivo son numéricos)
             if (!int.TryParse(codigoSalaStr, out int codigoSala))
