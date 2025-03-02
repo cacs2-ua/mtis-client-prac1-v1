@@ -207,10 +207,10 @@
             // controlPresenciaDataGridView
             // 
             controlPresenciaDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            controlPresenciaDataGridView.Location = new Point(572, 147);
+            controlPresenciaDataGridView.Location = new Point(559, 164);
             controlPresenciaDataGridView.Name = "controlPresenciaDataGridView";
             controlPresenciaDataGridView.RowHeadersWidth = 51;
-            controlPresenciaDataGridView.Size = new Size(1309, 838);
+            controlPresenciaDataGridView.Size = new Size(1321, 838);
             controlPresenciaDataGridView.TabIndex = 46;
             // 
             // ucControlPresencia

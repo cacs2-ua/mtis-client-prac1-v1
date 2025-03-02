@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp1.utils;
-using EmpleadosSoapServiceReference;
+using ControlPresenciaSoapServiceReference;
 
 namespace WinFormsApp1
 {
@@ -20,7 +20,7 @@ namespace WinFormsApp1
             Utils.ConfigurarDataGridView(controlPresenciaDataGridView, this.BackColor);
         }
 
-        private void consultarButton_Click(object sender, EventArgs e)
+        private async void consultarButton_Click(object sender, EventArgs e)
         {
             string codigoSalaStr = codigoSalaConsultarTextBox.Text.Trim();
 
@@ -31,29 +31,36 @@ namespace WinFormsApp1
                 return;
             }
 
+            if (!int.TryParse(codigoSalaStr, out int codigoSala))
+            {
+                MessageBox.Show("El codigoSala debe de ser un numero entero positivo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string WSKey = Utils.obtenerSoapKey();
 
-            var request = new consultarRequest
+            var request = new controlEmpleadoSalaRequest
             {
-                nifnie = nif,
+                codigoSala = codigoSala,
                 WSKey = WSKey
             };
 
             try
             {
-                using (var client = new EmpleadosClient())
+                using (var client = new ControlPresenciaClient())
                 {
-                    var response = await client.consultarAsync(request);
+                    var response = await client.controlEmpleadoSalaAsync(request);
 
                     if (Utils.ExisteErrorOAdvertencia(response.mensajeSalida))
                     {
                         return;
                     }
 
-                    if (response.empleadoOut != null)
+                    if (response.empleadosOut != null)
                     {
-                        consultarEmpleadoDataGridView.DataSource = new List<EmpleadosType> { response.empleadoOut };
+                        controlPresenciaDataGridView.DataSource = response.empleadosOut.ToList();
                     }
+
 
                 }
             }
@@ -61,8 +68,6 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Error al consultar registros de acceso:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
     }
 }
