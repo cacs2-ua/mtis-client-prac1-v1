@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class ucEmpleados: UserControl
+    public partial class ucEmpleados : UserControl
     {
         public ucEmpleados()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
