@@ -63,6 +63,12 @@ namespace WinFormsApp1.utils
             return false;
         }
 
+        public static bool ExisteErrorOAdvertencia(string mensajeSalida)
+        {
+            return ExisteError(mensajeSalida) || ExisteAdvertencia(mensajeSalida);
+        }
+
+
 
     }
 }

@@ -41,7 +41,7 @@ namespace WinFormsApp1
 
         private async void registrarRegistroAccesoButton_Click(object sender, EventArgs e)
         {
-            /*
+            
             // Paso 1: Obtener los textos de los TextBox en el orden indicado
             string nifnie = NIFTextBox.Text.Trim();
             string codigoSalaStr = codigoSalaTextBox.Text.Trim();
@@ -68,7 +68,6 @@ namespace WinFormsApp1
                 nifnie = nifnie,
                 codigoSala = codigoSala,
                 codigoDispositivo = codigoDispositivo,
-                WSKey = WSKey
             };
 
             try
@@ -76,17 +75,22 @@ namespace WinFormsApp1
                 // Paso 3: Crear el cliente SOAP y llamar a la operación registrarAsync
                 using (var client = new ControlAccesosClient())
                 {
-                    var response = await client.registrarAsync(registro);
+                    var response = await client.registrarAsync(registro, WSKey);
+
+                    if (Utils.ExisteErrorOAdvertencia(response.mensajeSalida))
+                    {
+                        return;
+                    }
 
                     // Mostrar la respuesta
-                    MessageBox.Show("Respuesta SOAP:\n" + response.@out, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Respuesta SOAP:\n" + response.mensajeSalida, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error en la llamada SOAP:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            */
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -164,12 +168,7 @@ namespace WinFormsApp1
                 {
                     var response = await client.consultarAsync(request);
 
-                    if (Utils.ExisteError(response.mensajeSalida))
-                    {
-                        return;
-                    }
-
-                    if (Utils.ExisteAdvertencia(response.mensajeSalida))
+                    if (Utils.ExisteErrorOAdvertencia(response.mensajeSalida))
                     {
                         return;
                     }
@@ -178,11 +177,6 @@ namespace WinFormsApp1
                     {
                         // Enlazar el array de registros al DataGridView para mostrar los resultados
                         registrosAccesosDataGridView.DataSource = response.@out;
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se encontraron registros de acceso con los criterios especificados.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        registrosAccesosDataGridView.DataSource = null;
                     }
                 }
             }
