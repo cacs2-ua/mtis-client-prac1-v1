@@ -39,8 +39,6 @@ namespace ServiceReference1
         
         private int codigoDispositivoField;
         
-        private string wSKeyField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string nifnie
@@ -80,20 +78,6 @@ namespace ServiceReference1
             set
             {
                 this.codigoDispositivoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string WSKey
-        {
-            get
-            {
-                return this.wSKeyField;
-            }
-            set
-            {
-                this.wSKeyField = value;
             }
         }
     }
@@ -203,8 +187,6 @@ namespace ServiceReference1
         
         private System.DateTime fechaHastaField;
         
-        private string wSKeyField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
         public string nifnie
@@ -274,20 +256,6 @@ namespace ServiceReference1
                 this.fechaHastaField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string WSKey
-        {
-            get
-            {
-                return this.wSKeyField;
-            }
-            set
-            {
-                this.wSKeyField = value;
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -301,13 +269,18 @@ namespace ServiceReference1
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public ServiceReference1.RegistroAccesosType @in;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.example.org/ControlAccesos/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string WSKey;
+        
         public registrarRequest()
         {
         }
         
-        public registrarRequest(ServiceReference1.RegistroAccesosType @in)
+        public registrarRequest(ServiceReference1.RegistroAccesosType @in, string WSKey)
         {
             this.@in = @in;
+            this.WSKey = WSKey;
         }
     }
     
@@ -320,15 +293,15 @@ namespace ServiceReference1
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.example.org/ControlAccesos/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @out;
+        public string mensajeSalida;
         
         public registrarResponse()
         {
         }
         
-        public registrarResponse(string @out)
+        public registrarResponse(string mensajeSalida)
         {
-            this.@out = @out;
+            this.mensajeSalida = mensajeSalida;
         }
     }
     
@@ -342,13 +315,18 @@ namespace ServiceReference1
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public ServiceReference1.FechasRegistroAccesosType @in;
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.example.org/ControlAccesos/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string WSKey;
+        
         public consultarRequest()
         {
         }
         
-        public consultarRequest(ServiceReference1.FechasRegistroAccesosType @in)
+        public consultarRequest(ServiceReference1.FechasRegistroAccesosType @in, string WSKey)
         {
             this.@in = @in;
+            this.WSKey = WSKey;
         }
     }
     
@@ -364,16 +342,16 @@ namespace ServiceReference1
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://www.example.org/ControlAccesos/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string mensaje;
+        public string mensajeSalida;
         
         public consultarResponse()
         {
         }
         
-        public consultarResponse(ServiceReference1.InstanciaRegistroAccesosType[] @out, string mensaje)
+        public consultarResponse(ServiceReference1.InstanciaRegistroAccesosType[] @out, string mensajeSalida)
         {
             this.@out = @out;
-            this.mensaje = mensaje;
+            this.mensajeSalida = mensajeSalida;
         }
     }
     
@@ -433,10 +411,11 @@ namespace ServiceReference1
             return base.Channel.registrarAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ServiceReference1.registrarResponse> registrarAsync(ServiceReference1.RegistroAccesosType @in)
+        public System.Threading.Tasks.Task<ServiceReference1.registrarResponse> registrarAsync(ServiceReference1.RegistroAccesosType @in, string WSKey)
         {
             ServiceReference1.registrarRequest inValue = new ServiceReference1.registrarRequest();
             inValue.@in = @in;
+            inValue.WSKey = WSKey;
             return ((ServiceReference1.ControlAccesos)(this)).registrarAsync(inValue);
         }
         
