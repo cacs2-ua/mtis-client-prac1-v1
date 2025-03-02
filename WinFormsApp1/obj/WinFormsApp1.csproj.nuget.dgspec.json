@@ -4,14 +4,14 @@
     "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger.Test\\IO.Swagger.Test.csproj": {
+    "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger.Test\\IO.Swagger.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger.Test\\IO.Swagger.Test.csproj",
+        "projectUniqueName": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger.Test\\IO.Swagger.Test.csproj",
         "projectName": "IO.Swagger.Test",
-        "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger.Test\\IO.Swagger.Test.csproj",
+        "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger.Test\\IO.Swagger.Test.csproj",
         "packagesPath": "C:\\Users\\Cris-SX\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger.Test\\obj\\",
+        "outputPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net471": {
             "targetAlias": "net471",
             "projectReferences": {
-              "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj": {
-                "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj"
+              "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj": {
+                "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj": {
+    "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj",
+        "projectUniqueName": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj",
         "projectName": "IO.Swagger",
-        "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj",
+        "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj",
         "packagesPath": "C:\\Users\\Cris-SX\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\obj\\",
+        "outputPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -193,11 +193,11 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger.Test\\IO.Swagger.Test.csproj": {
-                "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger.Test\\IO.Swagger.Test.csproj"
+              "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger.Test\\IO.Swagger.Test.csproj": {
+                "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger.Test\\IO.Swagger.Test.csproj"
               },
-              "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj": {
-                "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\ALL-clientes-open-api\\v5-cliente-openapi\\src\\IO.Swagger\\IO.Swagger.csproj"
+              "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj": {
+                "projectPath": "C:\\Users\\Cris-SX\\Desktop\\UA\\Segundo Cuatri\\MTIS\\Practica\\mine-spam\\pruebas-cliente-net\\cliente-soap-wsdl\\IO.Swagger\\IO.Swagger.csproj"
               }
             }
           }

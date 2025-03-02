@@ -18,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ALL-clientes-open-api\v5-cliente-openapi\src\IO.Swagger.Test\IO.Swagger.Test.csproj" />
-    <ProjectReference Include="..\..\ALL-clientes-open-api\v5-cliente-openapi\src\IO.Swagger\IO.Swagger.csproj" />
+    <ProjectReference Include="..\IO.Swagger.Test\IO.Swagger.Test.csproj" />
+    <ProjectReference Include="..\IO.Swagger\IO.Swagger.csproj" />
   </ItemGroup>
 
   <ItemGroup>
