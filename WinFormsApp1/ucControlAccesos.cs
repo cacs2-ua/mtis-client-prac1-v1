@@ -20,41 +20,8 @@ namespace WinFormsApp1
         public ucControlAccesos()
         {
             InitializeComponent();
-            ConfigurarDataGridView();
+            Utils.ConfigurarDataGridView(registrosAccesosDataGridView, this.BackColor);
         }
-
-        /// <summary>
-        /// Configura las propiedades del DataGridView para mostrar los registros de acceso.
-        /// </summary>
-        private void ConfigurarDataGridView()
-        {
-            // Generación automática de columnas
-            registrosAccesosDataGridView.AutoGenerateColumns = true;
-            registrosAccesosDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            registrosAccesosDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            registrosAccesosDataGridView.MultiSelect = false;
-            registrosAccesosDataGridView.ReadOnly = true;
-            registrosAccesosDataGridView.AllowUserToAddRows = false;
-            registrosAccesosDataGridView.AllowUserToDeleteRows = false;
-            registrosAccesosDataGridView.RowHeadersVisible = false;
-
-            registrosAccesosDataGridView.BorderStyle = BorderStyle.None;
-            registrosAccesosDataGridView.BackgroundColor = this.BackColor;
-
-            // Desactivar el estilo visual de los encabezados y configurarlos manualmente
-            registrosAccesosDataGridView.EnableHeadersVisualStyles = false;
-
-            // Establece el fondo a gris medio oscuro (hex: #696969)
-            registrosAccesosDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C8C8C8");
-
-            // Establece el color del texto en negro
-            registrosAccesosDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-
-            // Configura la fuente del encabezado para que esté en negrita
-            registrosAccesosDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font(registrosAccesosDataGridView.Font, FontStyle.Bold);
-
-        }
-
 
         private async void registrarRegistroAccesoButton_Click(object sender, EventArgs e)
         {
@@ -192,7 +159,6 @@ namespace WinFormsApp1
 
                     if (response.@out != null && response.@out.Length > 0)
                     {
-                        // Enlazar el array de registros al DataGridView para mostrar los resultados
                         registrosAccesosDataGridView.DataSource = response.@out;
                     }
                 }

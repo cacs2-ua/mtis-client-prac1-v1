@@ -68,7 +68,33 @@ namespace WinFormsApp1.utils
             return ExisteError(mensajeSalida) || ExisteAdvertencia(mensajeSalida);
         }
 
+        /// <summary>
+        /// Configura las propiedades visuales de un DataGridView para integrarlo con el diseño de la aplicación.
+        /// </summary>
+        /// <param name="dgv">El DataGridView a configurar.</param>
+        /// <param name="backColor">El color de fondo que se asignará al DataGridView.</param>
+        public static void ConfigurarDataGridView(DataGridView dgv, Color backColor)
+        {
+            // Configuración básica del DataGridView
+            dgv.AutoGenerateColumns = true;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.MultiSelect = false;
+            dgv.ReadOnly = true;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToDeleteRows = false;
+            dgv.RowHeadersVisible = false;
 
+            // Eliminación de bordes y configuración del fondo
+            dgv.BorderStyle = BorderStyle.None;
+            dgv.BackgroundColor = backColor;
+
+            // Configuración de los encabezados
+            dgv.EnableHeadersVisualStyles = false;
+            dgv.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C8C8C8"); // Gris medio (puedes ajustar el hexadecimal)
+            dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black; // Texto en negro
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font(dgv.Font, FontStyle.Bold); // Texto en negrita
+        }
 
     }
 }
