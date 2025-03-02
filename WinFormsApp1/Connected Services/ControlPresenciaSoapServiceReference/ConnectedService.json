@@ -1,0 +1,17 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://localhost:8080/Prac1-prueba-v2/services/ControlPresencia?wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "enableDataBinding": true,
+    "namespaceMappings": [
+      "*, ControlPresenciaSoapServiceReference"
+    ],
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}
