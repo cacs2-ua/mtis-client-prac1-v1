@@ -105,7 +105,7 @@ namespace WinFormsApp1
                 if (nivelConsultado == null)
                 {
                     MessageBox.Show("No se encontró ningún nivel con el valor proporcionado.",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     consultarNivelDataGridView.DataSource = null;
                 }
                 else
