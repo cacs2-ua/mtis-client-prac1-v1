@@ -470,6 +470,7 @@
             eliminarButton.TabIndex = 44;
             eliminarButton.Text = "Eliminar";
             eliminarButton.UseVisualStyleBackColor = false;
+            eliminarButton.Click += eliminarButton_Click;
             // 
             // consultarEmpleadoButton
             // 

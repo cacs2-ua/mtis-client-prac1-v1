@@ -337,5 +337,38 @@ namespace WinFormsApp1
             }
 
         }
+
+        private async void eliminarButton_Click(object sender, EventArgs e)
+        {
+            string nif = eliminarEmpleadoTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(nif))
+            {
+                MessageBox.Show("El campo de consulta del NIF/NIE no puede estar vacío.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string WSKey = Utils.obtenerSoapKey();
+
+            try
+            {
+                using (var client = new EmpleadosClient())
+                {
+                    var response = await client.borrarAsync(nif, WSKey);
+
+                    if (Utils.ExisteErrorOAdvertencia(response.mensajeSalida))
+                    {
+                        return;
+                    }
+
+                    MessageBox.Show(response.mensajeSalida, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar registros de acceso:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
