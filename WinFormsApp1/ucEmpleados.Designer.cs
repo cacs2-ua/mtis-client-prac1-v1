@@ -81,7 +81,6 @@
             consultarEmpleadoDataGridView = new DataGridView();
             idModificarEmpleadoTextBox = new TextBox();
             label24 = new Label();
-            label25 = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)consultarEmpleadoDataGridView).BeginInit();
             SuspendLayout();
@@ -91,7 +90,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(128, 128, 255);
-            label1.Location = new Point(143, 204);
+            label1.Location = new Point(140, 279);
             label1.Name = "label1";
             label1.Size = new Size(431, 46);
             label1.TabIndex = 0;
@@ -100,7 +99,7 @@
             // nifNieLabel
             // 
             nifNieLabel.AutoSize = true;
-            nifNieLabel.Location = new Point(91, 283);
+            nifNieLabel.Location = new Point(88, 358);
             nifNieLabel.Name = "nifNieLabel";
             nifNieLabel.Size = new Size(46, 20);
             nifNieLabel.TabIndex = 1;
@@ -108,7 +107,7 @@
             // 
             // nifNieRegistrarEmpleadoTextBox
             // 
-            nifNieRegistrarEmpleadoTextBox.Location = new Point(170, 280);
+            nifNieRegistrarEmpleadoTextBox.Location = new Point(167, 355);
             nifNieRegistrarEmpleadoTextBox.Name = "nifNieRegistrarEmpleadoTextBox";
             nifNieRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             nifNieRegistrarEmpleadoTextBox.TabIndex = 2;
@@ -130,7 +129,7 @@
             // 
             // nombreApellidosRegistrarEmpleadoTextBox
             // 
-            nombreApellidosRegistrarEmpleadoTextBox.Location = new Point(170, 336);
+            nombreApellidosRegistrarEmpleadoTextBox.Location = new Point(167, 411);
             nombreApellidosRegistrarEmpleadoTextBox.Name = "nombreApellidosRegistrarEmpleadoTextBox";
             nombreApellidosRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             nombreApellidosRegistrarEmpleadoTextBox.TabIndex = 5;
@@ -138,7 +137,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(13, 336);
+            label2.Location = new Point(10, 411);
             label2.Name = "label2";
             label2.Size = new Size(124, 20);
             label2.TabIndex = 4;
@@ -147,7 +146,7 @@
             // 
             // emailRegistrarEmpleadoTextBox
             // 
-            emailRegistrarEmpleadoTextBox.Location = new Point(170, 390);
+            emailRegistrarEmpleadoTextBox.Location = new Point(167, 465);
             emailRegistrarEmpleadoTextBox.Name = "emailRegistrarEmpleadoTextBox";
             emailRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             emailRegistrarEmpleadoTextBox.TabIndex = 7;
@@ -155,7 +154,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(91, 393);
+            label3.Location = new Point(88, 468);
             label3.Name = "label3";
             label3.Size = new Size(46, 20);
             label3.TabIndex = 6;
@@ -163,7 +162,7 @@
             // 
             // nafRegistrarEmpleadoTextBox
             // 
-            nafRegistrarEmpleadoTextBox.Location = new Point(170, 456);
+            nafRegistrarEmpleadoTextBox.Location = new Point(167, 531);
             nafRegistrarEmpleadoTextBox.Name = "nafRegistrarEmpleadoTextBox";
             nafRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             nafRegistrarEmpleadoTextBox.TabIndex = 9;
@@ -171,7 +170,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(107, 456);
+            label4.Location = new Point(104, 531);
             label4.Name = "label4";
             label4.Size = new Size(30, 20);
             label4.TabIndex = 8;
@@ -179,7 +178,7 @@
             // 
             // ibanRegistrarEmpleadoTextBox
             // 
-            ibanRegistrarEmpleadoTextBox.Location = new Point(170, 518);
+            ibanRegistrarEmpleadoTextBox.Location = new Point(167, 593);
             ibanRegistrarEmpleadoTextBox.Name = "ibanRegistrarEmpleadoTextBox";
             ibanRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             ibanRegistrarEmpleadoTextBox.TabIndex = 11;
@@ -187,7 +186,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(99, 521);
+            label5.Location = new Point(96, 596);
             label5.Name = "label5";
             label5.Size = new Size(38, 20);
             label5.TabIndex = 10;
@@ -195,7 +194,7 @@
             // 
             // idNivelRegistrarEmpleadoTextBox
             // 
-            idNivelRegistrarEmpleadoTextBox.Location = new Point(170, 583);
+            idNivelRegistrarEmpleadoTextBox.Location = new Point(167, 658);
             idNivelRegistrarEmpleadoTextBox.Name = "idNivelRegistrarEmpleadoTextBox";
             idNivelRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             idNivelRegistrarEmpleadoTextBox.TabIndex = 13;
@@ -203,7 +202,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(81, 586);
+            label6.Location = new Point(78, 661);
             label6.Name = "label6";
             label6.Size = new Size(56, 20);
             label6.TabIndex = 12;
@@ -211,7 +210,7 @@
             // 
             // usuarioRegistrarEmpleadoTextBox
             // 
-            usuarioRegistrarEmpleadoTextBox.Location = new Point(170, 644);
+            usuarioRegistrarEmpleadoTextBox.Location = new Point(167, 719);
             usuarioRegistrarEmpleadoTextBox.Name = "usuarioRegistrarEmpleadoTextBox";
             usuarioRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             usuarioRegistrarEmpleadoTextBox.TabIndex = 15;
@@ -219,7 +218,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(80, 644);
+            label7.Location = new Point(77, 719);
             label7.Name = "label7";
             label7.Size = new Size(57, 20);
             label7.TabIndex = 14;
@@ -227,7 +226,7 @@
             // 
             // passwordRegisrarEmpleadoTextBox
             // 
-            passwordRegisrarEmpleadoTextBox.Location = new Point(170, 706);
+            passwordRegisrarEmpleadoTextBox.Location = new Point(167, 781);
             passwordRegisrarEmpleadoTextBox.Name = "passwordRegisrarEmpleadoTextBox";
             passwordRegisrarEmpleadoTextBox.Size = new Size(370, 27);
             passwordRegisrarEmpleadoTextBox.TabIndex = 17;
@@ -235,7 +234,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(65, 706);
+            label8.Location = new Point(62, 781);
             label8.Name = "label8";
             label8.Size = new Size(72, 20);
             label8.TabIndex = 16;
@@ -243,7 +242,7 @@
             // 
             // validoRegistrarEmpleadoTextBox
             // 
-            validoRegistrarEmpleadoTextBox.Location = new Point(170, 772);
+            validoRegistrarEmpleadoTextBox.Location = new Point(167, 847);
             validoRegistrarEmpleadoTextBox.Name = "validoRegistrarEmpleadoTextBox";
             validoRegistrarEmpleadoTextBox.Size = new Size(370, 27);
             validoRegistrarEmpleadoTextBox.TabIndex = 19;
@@ -251,7 +250,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(91, 775);
+            label9.Location = new Point(88, 850);
             label9.Name = "label9";
             label9.Size = new Size(50, 20);
             label9.TabIndex = 18;
@@ -260,7 +259,7 @@
             // registrarEmpleadoButton
             // 
             registrarEmpleadoButton.BackColor = SystemColors.ControlDark;
-            registrarEmpleadoButton.Location = new Point(446, 833);
+            registrarEmpleadoButton.Location = new Point(443, 908);
             registrarEmpleadoButton.Name = "registrarEmpleadoButton";
             registrarEmpleadoButton.Size = new Size(94, 29);
             registrarEmpleadoButton.TabIndex = 20;
@@ -272,7 +271,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(128, 128, 255);
-            label10.Location = new Point(689, 207);
+            label10.Location = new Point(686, 282);
             label10.Name = "label10";
             label10.Size = new Size(394, 46);
             label10.TabIndex = 21;
@@ -281,7 +280,7 @@
             // 
             // ibanModificarEmpleadoTextBox
             // 
-            ibanModificarEmpleadoTextBox.Location = new Point(713, 576);
+            ibanModificarEmpleadoTextBox.Location = new Point(710, 651);
             ibanModificarEmpleadoTextBox.Name = "ibanModificarEmpleadoTextBox";
             ibanModificarEmpleadoTextBox.Size = new Size(370, 27);
             ibanModificarEmpleadoTextBox.TabIndex = 31;
@@ -289,7 +288,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(642, 579);
+            label11.Location = new Point(639, 654);
             label11.Name = "label11";
             label11.Size = new Size(38, 20);
             label11.TabIndex = 30;
@@ -297,7 +296,7 @@
             // 
             // nafModificarEmpleadoTextBox
             // 
-            nafModificarEmpleadoTextBox.Location = new Point(713, 514);
+            nafModificarEmpleadoTextBox.Location = new Point(710, 589);
             nafModificarEmpleadoTextBox.Name = "nafModificarEmpleadoTextBox";
             nafModificarEmpleadoTextBox.Size = new Size(370, 27);
             nafModificarEmpleadoTextBox.TabIndex = 29;
@@ -305,7 +304,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(650, 514);
+            label12.Location = new Point(647, 589);
             label12.Name = "label12";
             label12.Size = new Size(30, 20);
             label12.TabIndex = 28;
@@ -313,7 +312,7 @@
             // 
             // emailModificarEmpleadoTextBox
             // 
-            emailModificarEmpleadoTextBox.Location = new Point(713, 448);
+            emailModificarEmpleadoTextBox.Location = new Point(710, 523);
             emailModificarEmpleadoTextBox.Name = "emailModificarEmpleadoTextBox";
             emailModificarEmpleadoTextBox.Size = new Size(370, 27);
             emailModificarEmpleadoTextBox.TabIndex = 27;
@@ -321,7 +320,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(634, 451);
+            label13.Location = new Point(631, 526);
             label13.Name = "label13";
             label13.Size = new Size(46, 20);
             label13.TabIndex = 26;
@@ -329,7 +328,7 @@
             // 
             // nombreApellidosModificarEmpleadoTextBox
             // 
-            nombreApellidosModificarEmpleadoTextBox.Location = new Point(713, 394);
+            nombreApellidosModificarEmpleadoTextBox.Location = new Point(710, 469);
             nombreApellidosModificarEmpleadoTextBox.Name = "nombreApellidosModificarEmpleadoTextBox";
             nombreApellidosModificarEmpleadoTextBox.Size = new Size(370, 27);
             nombreApellidosModificarEmpleadoTextBox.TabIndex = 25;
@@ -337,7 +336,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(556, 394);
+            label14.Location = new Point(553, 469);
             label14.Name = "label14";
             label14.Size = new Size(124, 20);
             label14.TabIndex = 24;
@@ -345,7 +344,7 @@
             // 
             // nifNieModificarEmpleadoTextBox
             // 
-            nifNieModificarEmpleadoTextBox.Location = new Point(713, 338);
+            nifNieModificarEmpleadoTextBox.Location = new Point(710, 413);
             nifNieModificarEmpleadoTextBox.Name = "nifNieModificarEmpleadoTextBox";
             nifNieModificarEmpleadoTextBox.Size = new Size(370, 27);
             nifNieModificarEmpleadoTextBox.TabIndex = 23;
@@ -353,7 +352,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(634, 341);
+            label15.Location = new Point(631, 416);
             label15.Name = "label15";
             label15.Size = new Size(46, 20);
             label15.TabIndex = 22;
@@ -362,7 +361,7 @@
             // modificarEmpleadoButton
             // 
             modificarEmpleadoButton.BackColor = SystemColors.ControlDark;
-            modificarEmpleadoButton.Location = new Point(988, 888);
+            modificarEmpleadoButton.Location = new Point(985, 956);
             modificarEmpleadoButton.Name = "modificarEmpleadoButton";
             modificarEmpleadoButton.Size = new Size(94, 29);
             modificarEmpleadoButton.TabIndex = 40;
@@ -371,7 +370,7 @@
             // 
             // validoModificarEmpleadoTextBox
             // 
-            validoModificarEmpleadoTextBox.Location = new Point(713, 830);
+            validoModificarEmpleadoTextBox.Location = new Point(710, 905);
             validoModificarEmpleadoTextBox.Name = "validoModificarEmpleadoTextBox";
             validoModificarEmpleadoTextBox.Size = new Size(370, 27);
             validoModificarEmpleadoTextBox.TabIndex = 39;
@@ -379,7 +378,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(634, 833);
+            label16.Location = new Point(631, 908);
             label16.Name = "label16";
             label16.Size = new Size(50, 20);
             label16.TabIndex = 38;
@@ -387,7 +386,7 @@
             // 
             // passwordModificarEmpleadoTextBox
             // 
-            passwordModificarEmpleadoTextBox.Location = new Point(713, 764);
+            passwordModificarEmpleadoTextBox.Location = new Point(710, 839);
             passwordModificarEmpleadoTextBox.Name = "passwordModificarEmpleadoTextBox";
             passwordModificarEmpleadoTextBox.Size = new Size(370, 27);
             passwordModificarEmpleadoTextBox.TabIndex = 37;
@@ -395,7 +394,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(608, 764);
+            label17.Location = new Point(605, 839);
             label17.Name = "label17";
             label17.Size = new Size(72, 20);
             label17.TabIndex = 36;
@@ -403,7 +402,7 @@
             // 
             // usuarioModificarEmpleadoTextBox
             // 
-            usuarioModificarEmpleadoTextBox.Location = new Point(713, 702);
+            usuarioModificarEmpleadoTextBox.Location = new Point(710, 777);
             usuarioModificarEmpleadoTextBox.Name = "usuarioModificarEmpleadoTextBox";
             usuarioModificarEmpleadoTextBox.Size = new Size(370, 27);
             usuarioModificarEmpleadoTextBox.TabIndex = 35;
@@ -411,7 +410,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(623, 702);
+            label18.Location = new Point(620, 777);
             label18.Name = "label18";
             label18.Size = new Size(57, 20);
             label18.TabIndex = 34;
@@ -419,7 +418,7 @@
             // 
             // idNivelModificarEmpleadoTextBox
             // 
-            idNivelModificarEmpleadoTextBox.Location = new Point(713, 641);
+            idNivelModificarEmpleadoTextBox.Location = new Point(710, 716);
             idNivelModificarEmpleadoTextBox.Name = "idNivelModificarEmpleadoTextBox";
             idNivelModificarEmpleadoTextBox.Size = new Size(370, 27);
             idNivelModificarEmpleadoTextBox.TabIndex = 33;
@@ -427,7 +426,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(624, 644);
+            label19.Location = new Point(621, 719);
             label19.Name = "label19";
             label19.Size = new Size(56, 20);
             label19.TabIndex = 32;
@@ -438,7 +437,7 @@
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.FromArgb(128, 128, 255);
-            label20.Location = new Point(1203, 207);
+            label20.Location = new Point(1200, 282);
             label20.Name = "label20";
             label20.Size = new Size(370, 46);
             label20.TabIndex = 41;
@@ -446,7 +445,7 @@
             // 
             // eliminarEmpleadoTextBox
             // 
-            eliminarEmpleadoTextBox.Location = new Point(1203, 283);
+            eliminarEmpleadoTextBox.Location = new Point(1200, 358);
             eliminarEmpleadoTextBox.Name = "eliminarEmpleadoTextBox";
             eliminarEmpleadoTextBox.Size = new Size(370, 27);
             eliminarEmpleadoTextBox.TabIndex = 43;
@@ -454,7 +453,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(1134, 283);
+            label21.Location = new Point(1131, 358);
             label21.Name = "label21";
             label21.Size = new Size(46, 20);
             label21.TabIndex = 42;
@@ -463,7 +462,7 @@
             // eliminarButton
             // 
             eliminarButton.BackColor = SystemColors.ControlDark;
-            eliminarButton.Location = new Point(1479, 339);
+            eliminarButton.Location = new Point(1476, 409);
             eliminarButton.Name = "eliminarButton";
             eliminarButton.Size = new Size(94, 29);
             eliminarButton.TabIndex = 44;
@@ -473,7 +472,7 @@
             // consultarEmpleadoButton
             // 
             consultarEmpleadoButton.BackColor = SystemColors.ControlDark;
-            consultarEmpleadoButton.Location = new Point(1479, 565);
+            consultarEmpleadoButton.Location = new Point(438, 182);
             consultarEmpleadoButton.Name = "consultarEmpleadoButton";
             consultarEmpleadoButton.Size = new Size(94, 29);
             consultarEmpleadoButton.TabIndex = 48;
@@ -483,7 +482,7 @@
             // 
             // consultarEmpleadoTextBox
             // 
-            consultarEmpleadoTextBox.Location = new Point(1203, 509);
+            consultarEmpleadoTextBox.Location = new Point(162, 128);
             consultarEmpleadoTextBox.Name = "consultarEmpleadoTextBox";
             consultarEmpleadoTextBox.Size = new Size(370, 27);
             consultarEmpleadoTextBox.TabIndex = 47;
@@ -491,7 +490,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(1134, 513);
+            label22.Location = new Point(104, 128);
             label22.Name = "label22";
             label22.Size = new Size(46, 20);
             label22.TabIndex = 46;
@@ -502,7 +501,7 @@
             label23.AutoSize = true;
             label23.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(128, 128, 255);
-            label23.Location = new Point(1203, 436);
+            label23.Location = new Point(140, 54);
             label23.Name = "label23";
             label23.Size = new Size(392, 46);
             label23.TabIndex = 45;
@@ -511,15 +510,15 @@
             // consultarEmpleadoDataGridView
             // 
             consultarEmpleadoDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            consultarEmpleadoDataGridView.Location = new Point(1134, 614);
+            consultarEmpleadoDataGridView.Location = new Point(568, 106);
             consultarEmpleadoDataGridView.Name = "consultarEmpleadoDataGridView";
             consultarEmpleadoDataGridView.RowHeadersWidth = 51;
-            consultarEmpleadoDataGridView.Size = new Size(755, 185);
+            consultarEmpleadoDataGridView.Size = new Size(1313, 105);
             consultarEmpleadoDataGridView.TabIndex = 49;
             // 
             // idModificarEmpleadoTextBox
             // 
-            idModificarEmpleadoTextBox.Location = new Point(712, 284);
+            idModificarEmpleadoTextBox.Location = new Point(709, 359);
             idModificarEmpleadoTextBox.Name = "idModificarEmpleadoTextBox";
             idModificarEmpleadoTextBox.Size = new Size(370, 27);
             idModificarEmpleadoTextBox.TabIndex = 51;
@@ -527,28 +526,16 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(633, 287);
+            label24.Location = new Point(630, 362);
             label24.Name = "label24";
             label24.Size = new Size(22, 20);
             label24.TabIndex = 50;
             label24.Text = "id";
             // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Segoe UI", 30F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label25.ForeColor = Color.Blue;
-            label25.Location = new Point(623, 84);
-            label25.Name = "label25";
-            label25.Size = new Size(574, 67);
-            label25.TabIndex = 52;
-            label25.Text = "Servicios de Empleados";
-            // 
             // ucEmpleados
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label25);
             Controls.Add(idModificarEmpleadoTextBox);
             Controls.Add(label24);
             Controls.Add(consultarEmpleadoDataGridView);
@@ -665,6 +652,5 @@
         private DataGridView consultarEmpleadoDataGridView;
         private TextBox idModificarEmpleadoTextBox;
         private Label label24;
-        private Label label25;
     }
 }
