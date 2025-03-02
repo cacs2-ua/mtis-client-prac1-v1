@@ -18,6 +18,7 @@ namespace WinFormsApp1
         public ucNiveles()
         {
             InitializeComponent();
+            Utils.ConfigurarDataGridView(consultarNivelDataGridView, this.BackColor);
         }
 
         private async void registrarNivelButton_Click(object sender, EventArgs e)
@@ -71,7 +72,57 @@ namespace WinFormsApp1
             // Código opcional a ejecutar cuando cambie el contenido del nivelTextBox
         }
 
-        private void consultarNivelbutton_Click(object sender, EventArgs e)
+        private async void consultarNivelButton_Click(object sender, EventArgs e)
+        {
+            // Validar que el campo de consulta no esté vacío.
+            string nivelConsultaText = consultarNivelTextBox.Text.Trim();
+            if (string.IsNullOrEmpty(nivelConsultaText))
+            {
+                MessageBox.Show("El campo de consulta de nivel no puede estar vacío.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar que el contenido sea un número entero.
+            if (!int.TryParse(nivelConsultaText, out int nivelConsulta))
+            {
+                MessageBox.Show("El valor ingresado en el campo de consulta de nivel debe ser un número entero.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Obtener la WSKey usando el método definido en Utils.
+            string WSKey = Utils.obtenerRestKey();
+
+            try
+            {
+                // Crear una instancia de NivelesApi.
+                NivelesApi nivelesApi = new NivelesApi();
+
+                // Llamar al método asíncrono para consultar el nivel.
+                IO.Swagger.Model.Nivel nivelConsultado = await nivelesApi.ConsultarNivelAsync(nivelConsulta, WSKey);
+
+                if (nivelConsultado == null)
+                {
+                    MessageBox.Show("No se encontró ningún nivel con el valor proporcionado.",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    consultarNivelDataGridView.DataSource = null;
+                }
+                else
+                {
+                    // Mostrar el nivel consultado en el DataGridView.
+                    List<IO.Swagger.Model.Nivel> listaNivel = new List<IO.Swagger.Model.Nivel> { nivelConsultado };
+                    consultarNivelDataGridView.DataSource = listaNivel;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar el nivel: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void consultarNivelDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -38,7 +38,7 @@
             consultarNivelTextBox = new TextBox();
             label2 = new Label();
             consultarNivelDataGridView = new DataGridView();
-            consultarNivelbutton = new Button();
+            consultarNivelButton = new Button();
             ((System.ComponentModel.ISupportInitialize)consultarNivelDataGridView).BeginInit();
             SuspendLayout();
             // 
@@ -133,22 +133,22 @@
             consultarNivelDataGridView.Size = new Size(479, 155);
             consultarNivelDataGridView.TabIndex = 9;
             // 
-            // consultarNivelbutton
+            // consultarNivelButton
             // 
-            consultarNivelbutton.BackColor = SystemColors.ControlDark;
-            consultarNivelbutton.Location = new Point(452, 232);
-            consultarNivelbutton.Name = "consultarNivelbutton";
-            consultarNivelbutton.Size = new Size(94, 29);
-            consultarNivelbutton.TabIndex = 10;
-            consultarNivelbutton.Text = "Consultar";
-            consultarNivelbutton.UseVisualStyleBackColor = false;
-            consultarNivelbutton.Click += consultarNivelbutton_Click;
+            consultarNivelButton.BackColor = SystemColors.ControlDark;
+            consultarNivelButton.Location = new Point(452, 232);
+            consultarNivelButton.Name = "consultarNivelButton";
+            consultarNivelButton.Size = new Size(94, 29);
+            consultarNivelButton.TabIndex = 10;
+            consultarNivelButton.Text = "Consultar";
+            consultarNivelButton.UseVisualStyleBackColor = false;
+            consultarNivelButton.Click += consultarNivelButton_Click;
             // 
             // ucNiveles
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(consultarNivelbutton);
+            Controls.Add(consultarNivelButton);
             Controls.Add(consultarNivelDataGridView);
             Controls.Add(label1);
             Controls.Add(consultarNivelTextBox);
@@ -179,6 +179,6 @@
         private TextBox consultarNivelTextBox;
         private Label label2;
         private DataGridView consultarNivelDataGridView;
-        private Button consultarNivelbutton;
+        private Button consultarNivelButton;
     }
 }
