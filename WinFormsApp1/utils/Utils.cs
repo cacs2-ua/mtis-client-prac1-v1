@@ -42,5 +42,27 @@ namespace WinFormsApp1.utils
 
             return WSKey;
         }
+
+        public static bool ExisteError(string mensajeSalida)
+        {
+            if (!string.IsNullOrEmpty(mensajeSalida) && mensajeSalida.StartsWith("ERROR"))
+            {
+                MessageBox.Show(mensajeSalida, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return true;
+            }
+            return false;
+        }
+
+        public static bool ExisteAdvertencia(string mensajeSalida)
+        {
+            if (!string.IsNullOrEmpty(mensajeSalida) && mensajeSalida.StartsWith("ADVERTENCIA"))
+            {
+                MessageBox.Show(mensajeSalida, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }

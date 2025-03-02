@@ -164,6 +164,16 @@ namespace WinFormsApp1
                 {
                     var response = await client.consultarAsync(request);
 
+                    if (Utils.ExisteError(response.mensajeSalida))
+                    {
+                        return;
+                    }
+
+                    if (Utils.ExisteAdvertencia(response.mensajeSalida))
+                    {
+                        return;
+                    }
+
                     if (response.@out != null && response.@out.Length > 0)
                     {
                         // Enlazar el array de registros al DataGridView para mostrar los resultados
