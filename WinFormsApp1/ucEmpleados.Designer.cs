@@ -78,12 +78,12 @@
             consultarEmpleadoTextBox = new TextBox();
             label22 = new Label();
             label23 = new Label();
-            dataGridView1 = new DataGridView();
+            consultarEmpleadoDataGridView = new DataGridView();
             idModificarEmpleadoTextBox = new TextBox();
             label24 = new Label();
             label25 = new Label();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)consultarEmpleadoDataGridView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -479,6 +479,7 @@
             consultarEmpleadoButton.TabIndex = 48;
             consultarEmpleadoButton.Text = "Consultar";
             consultarEmpleadoButton.UseVisualStyleBackColor = false;
+            consultarEmpleadoButton.Click += consultarEmpleadoButton_Click;
             // 
             // consultarEmpleadoTextBox
             // 
@@ -507,14 +508,14 @@
             label23.TabIndex = 45;
             label23.Text = "Consultar un empleado";
             // 
-            // dataGridView1
+            // consultarEmpleadoDataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(1134, 614);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(755, 185);
-            dataGridView1.TabIndex = 49;
+            consultarEmpleadoDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            consultarEmpleadoDataGridView.Location = new Point(1134, 614);
+            consultarEmpleadoDataGridView.Name = "consultarEmpleadoDataGridView";
+            consultarEmpleadoDataGridView.RowHeadersWidth = 51;
+            consultarEmpleadoDataGridView.Size = new Size(755, 185);
+            consultarEmpleadoDataGridView.TabIndex = 49;
             // 
             // idModificarEmpleadoTextBox
             // 
@@ -550,7 +551,7 @@
             Controls.Add(label25);
             Controls.Add(idModificarEmpleadoTextBox);
             Controls.Add(label24);
-            Controls.Add(dataGridView1);
+            Controls.Add(consultarEmpleadoDataGridView);
             Controls.Add(consultarEmpleadoButton);
             Controls.Add(consultarEmpleadoTextBox);
             Controls.Add(label22);
@@ -604,7 +605,7 @@
             Size = new Size(1902, 1002);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)consultarEmpleadoDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -661,7 +662,7 @@
         private TextBox consultarEmpleadoTextBox;
         private Label label22;
         private Label label23;
-        private DataGridView dataGridView1;
+        private DataGridView consultarEmpleadoDataGridView;
         private TextBox idModificarEmpleadoTextBox;
         private Label label24;
         private Label label25;
