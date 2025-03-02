@@ -265,6 +265,7 @@
             registrarEmpleadoButton.TabIndex = 20;
             registrarEmpleadoButton.Text = "Registrar";
             registrarEmpleadoButton.UseVisualStyleBackColor = false;
+            registrarEmpleadoButton.Click += registrarEmpleadoButton_Click;
             // 
             // label10
             // 
