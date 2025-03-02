@@ -368,6 +368,7 @@
             modificarEmpleadoButton.TabIndex = 40;
             modificarEmpleadoButton.Text = "Modificar";
             modificarEmpleadoButton.UseVisualStyleBackColor = false;
+            modificarEmpleadoButton.Click += modificarEmpleadoButton_Click;
             // 
             // validoModificarEmpleadoTextBox
             // 
