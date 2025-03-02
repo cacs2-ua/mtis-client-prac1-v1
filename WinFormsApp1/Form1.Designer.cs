@@ -42,6 +42,7 @@
             notificacionesToolStripMenuItem = new ToolStripMenuItem();
             panelContenedor = new Panel();
             label1 = new Label();
+            validacionesToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip2.SuspendLayout();
             menuStrip1.SuspendLayout();
             panelContenedor.SuspendLayout();
@@ -69,7 +70,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { EmpleadosToolStripMenuItem, ControlAccesosToolStripMenuItem, ControlPresenciaToolStripMenuItem, salasToolStripMenuItem, nivelesToolStripMenuItem, dispositivosToolStripMenuItem, notificacionesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { EmpleadosToolStripMenuItem, ControlAccesosToolStripMenuItem, ControlPresenciaToolStripMenuItem, salasToolStripMenuItem, nivelesToolStripMenuItem, dispositivosToolStripMenuItem, notificacionesToolStripMenuItem, validacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1902, 28);
@@ -146,6 +147,12 @@
             label1.Text = "MTIS-Cliente-SOAP";
             label1.Click += label1_Click_2;
             // 
+            // validacionesToolStripMenuItem
+            // 
+            validacionesToolStripMenuItem.Name = "validacionesToolStripMenuItem";
+            validacionesToolStripMenuItem.Size = new Size(106, 24);
+            validacionesToolStripMenuItem.Text = "Validaciones";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -180,5 +187,6 @@
         private ToolStripMenuItem nivelesToolStripMenuItem;
         private ToolStripMenuItem dispositivosToolStripMenuItem;
         private ToolStripMenuItem notificacionesToolStripMenuItem;
+        private ToolStripMenuItem validacionesToolStripMenuItem;
     }
 }

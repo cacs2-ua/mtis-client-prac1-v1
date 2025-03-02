@@ -13,7 +13,7 @@ using WinFormsApp1.utils;
 
 namespace WinFormsApp1
 {
-    public partial class ucNiveles: UserControl
+    public partial class ucNiveles : UserControl
     {
         public ucNiveles()
         {
@@ -71,5 +71,9 @@ namespace WinFormsApp1
             // Código opcional a ejecutar cuando cambie el contenido del nivelTextBox
         }
 
+        private void consultarNivelbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

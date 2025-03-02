@@ -11,11 +11,6 @@ namespace WinFormsApp1
             InitializeComponent();
             this.AutoScroll = true;
             this.WindowState = FormWindowState.Maximized;
-            this.HorizontalScroll.Enabled = false;
-            this.HorizontalScroll.Visible = false;
-            panelContenedor.HorizontalScroll.Enabled = false;
-            panelContenedor.HorizontalScroll.Visible = false;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
