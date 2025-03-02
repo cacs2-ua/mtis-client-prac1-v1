@@ -28,7 +28,7 @@ namespace WinFormsApp1
         /// </summary>
         private void ConfigurarDataGridView()
         {
-            // Se generan automáticamente las columnas a partir de las propiedades de InstanciaRegistroAccesosType
+            // Generación automática de columnas
             registrosAccesosDataGridView.AutoGenerateColumns = true;
             registrosAccesosDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             registrosAccesosDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -37,7 +37,24 @@ namespace WinFormsApp1
             registrosAccesosDataGridView.AllowUserToAddRows = false;
             registrosAccesosDataGridView.AllowUserToDeleteRows = false;
             registrosAccesosDataGridView.RowHeadersVisible = false;
+
+            registrosAccesosDataGridView.BorderStyle = BorderStyle.None;
+            registrosAccesosDataGridView.BackgroundColor = this.BackColor;
+
+            // Desactivar el estilo visual de los encabezados y configurarlos manualmente
+            registrosAccesosDataGridView.EnableHeadersVisualStyles = false;
+
+            // Establece el fondo a gris medio oscuro (hex: #696969)
+            registrosAccesosDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#C8C8C8");
+
+            // Establece el color del texto en negro
+            registrosAccesosDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+
+            // Configura la fuente del encabezado para que esté en negrita
+            registrosAccesosDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font(registrosAccesosDataGridView.Font, FontStyle.Bold);
+
         }
+
 
         private async void registrarRegistroAccesoButton_Click(object sender, EventArgs e)
         {
