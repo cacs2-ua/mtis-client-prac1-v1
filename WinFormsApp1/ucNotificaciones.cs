@@ -7,14 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IO.Swagger.Api;
+using IO.Swagger.Model;
+using WinFormsApp1.utils;
 
 namespace WinFormsApp1
 {
-    public partial class ucNotificaciones: UserControl
+    public partial class ucNotificaciones : UserControl
     {
         public ucNotificaciones()
         {
             InitializeComponent();
+        }
+
+        private async void notificarPresenciaSalaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string WSKey = Utils.obtenerRestKey();
+
+                NotificacionesApi notificacionesApi = new NotificacionesApi();
+                InlineResponse2001 respuesta = await notificacionesApi.NotificarPresenciaSalaAsync(WSKey);
+
+                MessageBox.Show(respuesta.Message,
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al notificar presencia en sala: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

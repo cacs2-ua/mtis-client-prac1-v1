@@ -135,6 +135,7 @@
             notificarPresenciaSalaButton.TabIndex = 109;
             notificarPresenciaSalaButton.Text = "Notificar";
             notificarPresenciaSalaButton.UseVisualStyleBackColor = false;
+            notificarPresenciaSalaButton.Click += notificarPresenciaSalaButton_Click;
             // 
             // label5
             // 
