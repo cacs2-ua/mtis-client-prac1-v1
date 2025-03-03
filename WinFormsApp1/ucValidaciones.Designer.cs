@@ -181,6 +181,7 @@
             ibanValidarButton.TabIndex = 55;
             ibanValidarButton.Text = "Validar";
             ibanValidarButton.UseVisualStyleBackColor = false;
+            ibanValidarButton.Click += ibanValidarButton_Click;
             // 
             // label7
             // 
