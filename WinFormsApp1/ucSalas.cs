@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IO.Swagger.Api;
 using WinFormsApp1.utils;
-using ControlPresenciaSoapServiceReference;
 
 namespace WinFormsApp1
 {
@@ -20,9 +20,50 @@ namespace WinFormsApp1
             Utils.ConfigurarDataGridView(consultarSalasDataGridView, this.BackColor);
         }
 
-        private void consultarSalaButton_Click(object sender, EventArgs e)
+        private async void consultarSalaButton_Click(object sender, EventArgs e)
         {
+            string codigoSalaStr = codigoSalaConsultarSalaTextBox.Text.Trim();
+            if (string.IsNullOrEmpty(codigoSalaStr))
+            {
+                MessageBox.Show("El campo del 'codigoSala' no puede estar vacío.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            // Validar que el contenido sea un número entero.
+            if (!int.TryParse(codigoSalaStr, out int codigoSala))
+            {
+                MessageBox.Show("El valor ingresado en el campo de 'codigoSala' debe ser un número entero.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Obtener la WSKey usando el método definido en Utils.
+            string WSKey = Utils.obtenerRestKey();
+
+            try
+            {
+                SalasApi salasApi = new SalasApi();
+
+                IO.Swagger.Model.Sala salaConsultada = await salasApi.ConsultarSalaAsync(codigoSala, WSKey);
+
+                if (salaConsultada == null)
+                {
+                    MessageBox.Show("No se encontró ninguna sala con el codigo proporcionado.",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    consultarSalasDataGridView.DataSource = null;
+                }
+                else
+                {
+                    List<IO.Swagger.Model.Sala> listaSala = new List<IO.Swagger.Model.Sala> { salaConsultada };
+                    consultarSalasDataGridView.DataSource = listaSala;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar el nivel: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
