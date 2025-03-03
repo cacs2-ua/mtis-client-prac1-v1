@@ -84,6 +84,7 @@
             modificarSalaButton.TabIndex = 105;
             modificarSalaButton.Text = "Modificar";
             modificarSalaButton.UseVisualStyleBackColor = false;
+            modificarSalaButton.Click += modificarSalaButton_Click;
             // 
             // crearSalaButton
             // 
