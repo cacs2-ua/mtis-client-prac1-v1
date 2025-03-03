@@ -173,6 +173,12 @@ namespace WinFormsApp1
 
         private void salasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelContenedor.Controls.Clear();
+
+            ucSalas uc = new ucSalas();
+            uc.Width = panelContenedor.ClientSize.Width;
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            panelContenedor.Controls.Add(uc);
 
         }
 
