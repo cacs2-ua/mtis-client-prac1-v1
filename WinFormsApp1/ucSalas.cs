@@ -65,5 +65,66 @@ namespace WinFormsApp1
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private async void crearSalaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string codigoSalaStr = codigoSalaCrearSalaTextBox.Text.Trim();
+                string nombre = nombreRegistrarSalaTextBox.Text.Trim();
+                string nivelStr = nivelRegistrarSalaTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(codigoSalaStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'codigoSala' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                    
+                if (!int.TryParse(codigoSalaStr, out int codigoSala))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'codigoSala' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(nombre))
+                {
+                    MessageBox.Show("El campo de consulta de 'nombre' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(nivelStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'nivel' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(nivelStr, out int nivel))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'nivel' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                IO.Swagger.Model.Sala nuevaSala = new IO.Swagger.Model.Sala(1, codigoSala, nombre, nivel);
+
+                IO.Swagger.Api.SalasApi salasApi = new IO.Swagger.Api.SalasApi();
+
+                IO.Swagger.Model.Sala salaRegistrada = await salasApi.NuevoSalaAsync(nuevaSala, WSKey);
+
+                MessageBox.Show("Sala registrada exitosamente. ID: " + salaRegistrada.Id,
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar nivel: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

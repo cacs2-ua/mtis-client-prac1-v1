@@ -94,6 +94,7 @@
             crearSalaButton.TabIndex = 104;
             crearSalaButton.Text = "Crear";
             crearSalaButton.UseVisualStyleBackColor = false;
+            crearSalaButton.Click += crearSalaButton_Click;
             // 
             // label4
             // 
