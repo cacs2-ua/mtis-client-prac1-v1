@@ -160,7 +160,7 @@ namespace WinFormsApp1
                 Dispositivo modificadoDispositivo = new Dispositivo(id, codigoDispositivo, descripcion);
 
                 DispositivosApi dispositivosApi = new DispositivosApi();
-                InlineResponse200 respuesta  = await dispositivosApi.ModificarDispositivoAsync(modificadoDispositivo, WSKey);
+                InlineResponse200 respuesta = await dispositivosApi.ModificarDispositivoAsync(modificadoDispositivo, WSKey);
 
                 MessageBox.Show("Dispositivo modificado exitosamente. ID: " + modificadoDispositivo.Id,
                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -170,7 +170,43 @@ namespace WinFormsApp1
                 MessageBox.Show("Error al modificar el dispositivo: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
+        }
+
+        private async void eliminarDispositivoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string codigoDispositivoStr = nivelEliminarDispositivoTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(codigoDispositivoStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'codigoDispositivo' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(codigoDispositivoStr, out int codigoDispositivo))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'codigoDispositivo' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                DispositivosApi dispositivosApi = new DispositivosApi();
+                InlineResponse2001 respuesta = await dispositivosApi.BorrarDispositivoAsync(codigoDispositivo, WSKey);
+
+                MessageBox.Show("Dispositivo borrado exitosamente. ",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al borrar el dispositivo: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

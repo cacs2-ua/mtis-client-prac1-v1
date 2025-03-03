@@ -35,7 +35,7 @@
             codigoModificarDispositivoTextBox = new TextBox();
             label24 = new Label();
             eliminarDispositivoButton = new Button();
-            eliminarDispositivoTextBox = new TextBox();
+            nivelEliminarDispositivoTextBox = new TextBox();
             label21 = new Label();
             label20 = new Label();
             descripcionModificarDispositivoTextBox = new TextBox();
@@ -118,13 +118,14 @@
             eliminarDispositivoButton.TabIndex = 140;
             eliminarDispositivoButton.Text = "Eliminar";
             eliminarDispositivoButton.UseVisualStyleBackColor = false;
+            eliminarDispositivoButton.Click += eliminarDispositivoButton_Click;
             // 
-            // eliminarDispositivoTextBox
+            // nivelEliminarDispositivoTextBox
             // 
-            eliminarDispositivoTextBox.Location = new Point(1247, 492);
-            eliminarDispositivoTextBox.Name = "eliminarDispositivoTextBox";
-            eliminarDispositivoTextBox.Size = new Size(370, 27);
-            eliminarDispositivoTextBox.TabIndex = 139;
+            nivelEliminarDispositivoTextBox.Location = new Point(1247, 492);
+            nivelEliminarDispositivoTextBox.Name = "nivelEliminarDispositivoTextBox";
+            nivelEliminarDispositivoTextBox.Size = new Size(370, 27);
+            nivelEliminarDispositivoTextBox.TabIndex = 139;
             // 
             // label21
             // 
@@ -284,7 +285,7 @@
             Controls.Add(codigoModificarDispositivoTextBox);
             Controls.Add(label24);
             Controls.Add(eliminarDispositivoButton);
-            Controls.Add(eliminarDispositivoTextBox);
+            Controls.Add(nivelEliminarDispositivoTextBox);
             Controls.Add(label21);
             Controls.Add(label20);
             Controls.Add(descripcionModificarDispositivoTextBox);
@@ -318,7 +319,7 @@
         private TextBox codigoModificarDispositivoTextBox;
         private Label label24;
         private Button eliminarDispositivoButton;
-        private TextBox eliminarDispositivoTextBox;
+        private TextBox nivelEliminarDispositivoTextBox;
         private Label label21;
         private Label label20;
         private TextBox descripcionModificarDispositivoTextBox;
