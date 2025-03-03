@@ -228,6 +228,7 @@
             registrarDispositivoButton.TabIndex = 127;
             registrarDispositivoButton.Text = "Registrar";
             registrarDispositivoButton.UseVisualStyleBackColor = false;
+            registrarDispositivoButton.Click += registrarDispositivoButton_Click;
             // 
             // labelN3
             // 

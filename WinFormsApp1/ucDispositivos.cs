@@ -65,5 +65,51 @@ namespace WinFormsApp1
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private async void registrarDispositivoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string codigoDispositivoStr = codigoCrearDispositivoTextBox.Text.Trim();
+                string descripcion = descripcionCrearDispositivoTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(codigoDispositivoStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'codigoDispositivo' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(codigoDispositivoStr, out int codigoDispositivo))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'codigoDispositivo' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(descripcion))
+                {
+                    MessageBox.Show("El campo de consulta de 'descripcion' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                Dispositivo nuevoDispositivo = new Dispositivo(1, codigoDispositivo, descripcion);
+
+                DispositivosApi dispositivosApi = new DispositivosApi();
+                Dispositivo dispositivoRegistrado = await dispositivosApi.NuevoDispositivoAsync(nuevoDispositivo, WSKey);
+
+                MessageBox.Show("Dispositivo registrado exitosamente. ID: " + dispositivoRegistrado.Id,
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear el dispositivo: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
