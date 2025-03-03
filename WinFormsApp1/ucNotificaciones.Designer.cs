@@ -63,6 +63,7 @@
             notificarErrorButton.TabIndex = 117;
             notificarErrorButton.Text = "Notificar";
             notificarErrorButton.UseVisualStyleBackColor = false;
+            notificarErrorButton.Click += notificarErrorButton_Click;
             // 
             // label1
             // 

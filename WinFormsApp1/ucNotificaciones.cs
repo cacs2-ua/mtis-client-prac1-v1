@@ -69,5 +69,44 @@ namespace WinFormsApp1
             }
 
         }
+
+        private async void notificarErrorButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nif = nifNotificarErrorTextBox.Text.Trim();
+                string errorStr = errorNotificarErrorTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(nif))
+                {
+                    MessageBox.Show("El campo de consulta de 'nif' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(errorStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'error' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                NotificacionesErrorBody notificacion = new NotificacionesErrorBody(nif, errorStr);
+
+                NotificacionesApi notificacionesApi = new NotificacionesApi();
+                InlineResponse2001 respuesta = await notificacionesApi.NotificarErrorAsync(notificacion, WSKey);
+
+                MessageBox.Show(respuesta.Message,
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al notificar presencia en sala: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
