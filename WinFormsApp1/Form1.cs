@@ -206,7 +206,12 @@ namespace WinFormsApp1
 
         private void notificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelContenedor.Controls.Clear();
 
+            ucNotificaciones uc = new ucNotificaciones();
+            uc.Width = panelContenedor.ClientSize.Width;
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            panelContenedor.Controls.Add(uc);
         }
 
         private void label1_Click_2(object sender, EventArgs e)

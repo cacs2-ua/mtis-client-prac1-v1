@@ -25,5 +25,8 @@
     <Compile Update="ucDispositivos.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucNotificaciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
