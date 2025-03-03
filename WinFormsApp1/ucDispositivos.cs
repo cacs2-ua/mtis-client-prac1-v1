@@ -111,5 +111,66 @@ namespace WinFormsApp1
             }
 
         }
+
+        private async void modificarDispositivoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string idStr = idModificarDispositivoTextBox.Text.Trim();
+                string codigoDispositivoStr = codigoModificarDispositivoTextBox.Text.Trim();
+                string descripcion = descripcionModificarDispositivoTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(idStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'id' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(idStr, out int id))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'id' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(codigoDispositivoStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'codigoDispositivo' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(codigoDispositivoStr, out int codigoDispositivo))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'codigoDispositivo' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(descripcion))
+                {
+                    MessageBox.Show("El campo de consulta de 'descripcion' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                Dispositivo modificadoDispositivo = new Dispositivo(id, codigoDispositivo, descripcion);
+
+                DispositivosApi dispositivosApi = new DispositivosApi();
+                InlineResponse200 respuesta  = await dispositivosApi.ModificarDispositivoAsync(modificadoDispositivo, WSKey);
+
+                MessageBox.Show("Dispositivo modificado exitosamente. ID: " + modificadoDispositivo.Id,
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el dispositivo: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
     }
 }

@@ -91,6 +91,7 @@
             modificarDispositivoButton.TabIndex = 143;
             modificarDispositivoButton.Text = "Modificar";
             modificarDispositivoButton.UseVisualStyleBackColor = false;
+            modificarDispositivoButton.Click += modificarDispositivoButton_Click;
             // 
             // codigoModificarDispositivoTextBox
             // 
