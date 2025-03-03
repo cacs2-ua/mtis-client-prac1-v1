@@ -87,5 +87,39 @@ namespace WinFormsApp1
             }
 
         }
+
+        private async void nafValidarButton_Click(object sender, EventArgs e)
+        {
+            string naf = nafValidarTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(naf))
+            {
+                MessageBox.Show("El campo del 'naf' no puede estar vacío.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string WSKey = Utils.obtenerSoapKey();
+
+            try
+            {
+                using (var client = new ValidacionesClient())
+                {
+                    var response = await client.validarNAFAsync(naf, WSKey);
+
+                    if (Utils.ExisteErrorOAdvertencia(response.Body.mensajeSalida))
+                    {
+                        return;
+                    }
+
+                    MessageBox.Show("Respuesta SOAP:\n" + response.Body.mensajeSalida, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar registros de acceso:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

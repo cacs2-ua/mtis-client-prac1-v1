@@ -143,6 +143,7 @@
             nafValidarButton.TabIndex = 51;
             nafValidarButton.Text = "Validar";
             nafValidarButton.UseVisualStyleBackColor = false;
+            nafValidarButton.Click += nafValidarButton_Click;
             // 
             // label4
             // 
