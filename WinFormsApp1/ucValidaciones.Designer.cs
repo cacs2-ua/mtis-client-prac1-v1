@@ -105,6 +105,7 @@
             nieValidarButton.TabIndex = 47;
             nieValidarButton.Text = "Validar";
             nieValidarButton.UseVisualStyleBackColor = false;
+            nieValidarButton.Click += nieValidarButton_Click;
             // 
             // label2
             // 
