@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IO.Swagger.Api;
+using IO.Swagger.Model;
 using WinFormsApp1.utils;
 
 
@@ -124,6 +125,70 @@ namespace WinFormsApp1
 
         private void consultarNivelDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private async void modificarNivelButton_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                string idStr = idModificarNivelTextBox.Text.Trim();
+                string nivelStr = nivelModificarNivelTextBox.Text.Trim();
+                string descripcion = descripcionModificarNivelTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(idStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'id' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(idStr, out int id))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'id' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(nivelStr))
+                {
+                    MessageBox.Show("El campo de 'nivel' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(nivelStr, out int nivel))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'nivel' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(descripcion))
+                {
+                    MessageBox.Show("El campo de 'descripcion' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                Nivel nivelModificado = new Nivel(id, nivel, descripcion);
+
+                NivelesApi nivelesApi = new NivelesApi();
+
+                InlineResponse200 respuesta = await nivelesApi.ModificarNivelAsync(nivelModificado, WSKey);
+
+
+                MessageBox.Show("Nivel modifcado exitosamente. ",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el nivel: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }
