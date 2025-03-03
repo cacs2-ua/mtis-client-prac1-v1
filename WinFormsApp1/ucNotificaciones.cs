@@ -38,5 +38,36 @@ namespace WinFormsApp1
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private async void notificarUsuarioValidoButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string nif = nifNotificarUsuarioValidoTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(nif))
+                {
+                    MessageBox.Show("El campo de consulta de 'nif' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                NotificacionesUsuarioValidoBody notificacion = new NotificacionesUsuarioValidoBody(nif);
+
+                NotificacionesApi notificacionesApi = new NotificacionesApi();
+                InlineResponse2001 respuesta = await notificacionesApi.NotificarUsuarioValidoAsync(notificacion, WSKey);
+
+                MessageBox.Show(respuesta.Message,
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al notificar presencia en sala: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

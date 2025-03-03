@@ -31,14 +31,16 @@
             label4 = new Label();
             notificarErrorButton = new Button();
             label1 = new Label();
-            emailNotificarErrorTextBox = new TextBox();
+            nifNotificarErrorTextBox = new TextBox();
             label6 = new Label();
             notificarUsuarioValidoButton = new Button();
             label2 = new Label();
-            emailNotificarUsuarioValidoTextBox = new TextBox();
+            nifNotificarUsuarioValidoTextBox = new TextBox();
             label3 = new Label();
             notificarPresenciaSalaButton = new Button();
             label5 = new Label();
+            label7 = new Label();
+            errorNotificarErrorTextBox = new TextBox();
             SuspendLayout();
             // 
             // label4
@@ -55,7 +57,7 @@
             // notificarErrorButton
             // 
             notificarErrorButton.BackColor = SystemColors.ControlDark;
-            notificarErrorButton.Location = new Point(1488, 293);
+            notificarErrorButton.Location = new Point(1488, 350);
             notificarErrorButton.Name = "notificarErrorButton";
             notificarErrorButton.Size = new Size(94, 29);
             notificarErrorButton.TabIndex = 117;
@@ -65,18 +67,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(1232, 243);
+            label1.Location = new Point(1242, 243);
             label1.Name = "label1";
-            label1.Size = new Size(46, 20);
+            label1.Size = new Size(26, 20);
             label1.TabIndex = 116;
-            label1.Text = "email";
+            label1.Text = "nif";
             // 
-            // emailNotificarErrorTextBox
+            // nifNotificarErrorTextBox
             // 
-            emailNotificarErrorTextBox.Location = new Point(1294, 240);
-            emailNotificarErrorTextBox.Name = "emailNotificarErrorTextBox";
-            emailNotificarErrorTextBox.Size = new Size(288, 27);
-            emailNotificarErrorTextBox.TabIndex = 115;
+            nifNotificarErrorTextBox.Location = new Point(1294, 240);
+            nifNotificarErrorTextBox.Name = "nifNotificarErrorTextBox";
+            nifNotificarErrorTextBox.Size = new Size(288, 27);
+            nifNotificarErrorTextBox.TabIndex = 115;
             // 
             // label6
             // 
@@ -98,33 +100,34 @@
             notificarUsuarioValidoButton.TabIndex = 113;
             notificarUsuarioValidoButton.Text = "Notificar";
             notificarUsuarioValidoButton.UseVisualStyleBackColor = false;
+            notificarUsuarioValidoButton.Click += notificarUsuarioValidoButton_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(757, 243);
+            label2.Location = new Point(770, 243);
             label2.Name = "label2";
-            label2.Size = new Size(46, 20);
+            label2.Size = new Size(26, 20);
             label2.TabIndex = 112;
-            label2.Text = "email";
+            label2.Text = "nif";
             // 
-            // emailNotificarUsuarioValidoTextBox
+            // nifNotificarUsuarioValidoTextBox
             // 
-            emailNotificarUsuarioValidoTextBox.Location = new Point(819, 240);
-            emailNotificarUsuarioValidoTextBox.Name = "emailNotificarUsuarioValidoTextBox";
-            emailNotificarUsuarioValidoTextBox.Size = new Size(288, 27);
-            emailNotificarUsuarioValidoTextBox.TabIndex = 111;
+            nifNotificarUsuarioValidoTextBox.Location = new Point(819, 240);
+            nifNotificarUsuarioValidoTextBox.Name = "nifNotificarUsuarioValidoTextBox";
+            nifNotificarUsuarioValidoTextBox.Size = new Size(288, 27);
+            nifNotificarUsuarioValidoTextBox.TabIndex = 111;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.SlateBlue;
-            label3.Location = new Point(787, 153);
+            label3.Location = new Point(759, 153);
             label3.Name = "label3";
-            label3.Size = new Size(397, 46);
+            label3.Size = new Size(458, 46);
             label3.TabIndex = 110;
-            label3.Text = "Notificar usuario valido";
+            label3.Text = "Notificar validez de usuario";
             // 
             // notificarPresenciaSalaButton
             // 
@@ -148,17 +151,35 @@
             label5.TabIndex = 106;
             label5.Text = "Notificar presencia en sala";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(1227, 296);
+            label7.Name = "label7";
+            label7.Size = new Size(41, 20);
+            label7.TabIndex = 119;
+            label7.Text = "error";
+            // 
+            // errorNotificarErrorTextBox
+            // 
+            errorNotificarErrorTextBox.Location = new Point(1294, 293);
+            errorNotificarErrorTextBox.Name = "errorNotificarErrorTextBox";
+            errorNotificarErrorTextBox.Size = new Size(288, 27);
+            errorNotificarErrorTextBox.TabIndex = 118;
+            // 
             // ucNotificaciones
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label7);
+            Controls.Add(errorNotificarErrorTextBox);
             Controls.Add(notificarErrorButton);
             Controls.Add(label1);
-            Controls.Add(emailNotificarErrorTextBox);
+            Controls.Add(nifNotificarErrorTextBox);
             Controls.Add(label6);
             Controls.Add(notificarUsuarioValidoButton);
             Controls.Add(label2);
-            Controls.Add(emailNotificarUsuarioValidoTextBox);
+            Controls.Add(nifNotificarUsuarioValidoTextBox);
             Controls.Add(label3);
             Controls.Add(notificarPresenciaSalaButton);
             Controls.Add(label5);
@@ -174,13 +195,15 @@
         private Label label4;
         private Button notificarErrorButton;
         private Label label1;
-        private TextBox emailNotificarErrorTextBox;
+        private TextBox nifNotificarErrorTextBox;
         private Label label6;
         private Button notificarUsuarioValidoButton;
         private Label label2;
-        private TextBox emailNotificarUsuarioValidoTextBox;
+        private TextBox nifNotificarUsuarioValidoTextBox;
         private Label label3;
         private Button notificarPresenciaSalaButton;
         private Label label5;
+        private Label label7;
+        private TextBox errorNotificarErrorTextBox;
     }
 }
