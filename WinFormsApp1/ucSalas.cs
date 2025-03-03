@@ -62,7 +62,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al consultar el nivel: " + ex.Message,
+                MessageBox.Show("Error al consultar la sala: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -123,7 +123,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar nivel: " + ex.Message,
+                MessageBox.Show("Error al crear la sala: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -200,10 +200,47 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al registrar nivel: " + ex.Message,
+                MessageBox.Show("Error al modificar la sala: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private async void eliminarSalaButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string codigoSalaStr = codigoSalaEliminarSalaTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(codigoSalaStr))
+                {
+                    MessageBox.Show("El campo de consulta de 'codigoSala' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(codigoSalaStr, out int codigoSala))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'codigoSala' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                SalasApi salasApi = new SalasApi();
+
+                InlineResponse2001 respuesta = await salasApi.BorrarSalaAsync(codigoSala, WSKey);
+
+
+                MessageBox.Show("Sala borrada exitosamente. ",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar la sala: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -180,6 +180,7 @@
             eliminarSalaButton.TabIndex = 95;
             eliminarSalaButton.Text = "Eliminar";
             eliminarSalaButton.UseVisualStyleBackColor = false;
+            eliminarSalaButton.Click += eliminarSalaButton_Click;
             // 
             // codigoSalaEliminarSalaTextBox
             // 
