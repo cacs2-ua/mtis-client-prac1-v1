@@ -40,9 +40,9 @@
             nivelesToolStripMenuItem = new ToolStripMenuItem();
             dispositivosToolStripMenuItem = new ToolStripMenuItem();
             notificacionesToolStripMenuItem = new ToolStripMenuItem();
+            validacionesToolStripMenuItem = new ToolStripMenuItem();
             panelContenedor = new Panel();
             label1 = new Label();
-            validacionesToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip2.SuspendLayout();
             menuStrip1.SuspendLayout();
             panelContenedor.SuspendLayout();
@@ -87,8 +87,8 @@
             // ControlAccesosToolStripMenuItem
             // 
             ControlAccesosToolStripMenuItem.Name = "ControlAccesosToolStripMenuItem";
-            ControlAccesosToolStripMenuItem.Size = new Size(125, 24);
-            ControlAccesosToolStripMenuItem.Text = "ControlAccesos";
+            ControlAccesosToolStripMenuItem.Size = new Size(123, 24);
+            ControlAccesosToolStripMenuItem.Text = " ControlAcceso";
             ControlAccesosToolStripMenuItem.Click += ControlAccesosToolStripMenuItem_Click;
             // 
             // ControlPresenciaToolStripMenuItem
@@ -126,6 +126,13 @@
             notificacionesToolStripMenuItem.Text = "Notificaciones";
             notificacionesToolStripMenuItem.Click += notificacionesToolStripMenuItem_Click;
             // 
+            // validacionesToolStripMenuItem
+            // 
+            validacionesToolStripMenuItem.Name = "validacionesToolStripMenuItem";
+            validacionesToolStripMenuItem.Size = new Size(106, 24);
+            validacionesToolStripMenuItem.Text = "Validaciones";
+            validacionesToolStripMenuItem.Click += validacionesToolStripMenuItem_Click;
+            // 
             // panelContenedor
             // 
             panelContenedor.Controls.Add(label1);
@@ -146,12 +153,6 @@
             label1.TabIndex = 0;
             label1.Text = "MTIS-Cliente-SOAP";
             label1.Click += label1_Click_2;
-            // 
-            // validacionesToolStripMenuItem
-            // 
-            validacionesToolStripMenuItem.Name = "validacionesToolStripMenuItem";
-            validacionesToolStripMenuItem.Size = new Size(106, 24);
-            validacionesToolStripMenuItem.Text = "Validaciones";
             // 
             // Form1
             // 

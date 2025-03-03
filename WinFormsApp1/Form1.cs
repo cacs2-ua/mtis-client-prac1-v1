@@ -62,22 +62,22 @@ namespace WinFormsApp1
 
             if (!System.IO.File.Exists(wsKeyFilePath))
             {
-                MessageBox.Show("El archivo wskey.txt no se encontró en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El archivo wskey.txt no se encontrï¿½ en la carpeta resources.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             string WSKey = System.IO.File.ReadAllText(wsKeyFilePath).Trim();
 
-            // Convertir a enteros (se asume que codigoSala y codigoDispositivo son numéricos)
+            // Convertir a enteros (se asume que codigoSala y codigoDispositivo son numï¿½ricos)
             if (!int.TryParse(codigoSalaStr, out int codigoSala))
             {
-                MessageBox.Show("El código de sala no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El cï¿½digo de sala no es vï¿½lido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (!int.TryParse(codigoDispositivoStr, out int codigoDispositivo))
             {
-                MessageBox.Show("El código de dispositivo no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El cï¿½digo de dispositivo no es vï¿½lido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -92,7 +92,7 @@ namespace WinFormsApp1
 
             try
             {
-                // Paso 3: Crear el cliente SOAP y llamar a la operación registrarAsync
+                // Paso 3: Crear el cliente SOAP y llamar a la operaciï¿½n registrarAsync
                 using (var client = new ControlAccesosClient())
                 {
                     var response = await client.registrarAsync(registro);
@@ -134,7 +134,7 @@ namespace WinFormsApp1
             // Ajusta el ancho del UserControl para que sea exactamente el mismo que el del panel
             uc.Width = panelContenedor.ClientSize.Width;
 
-            // Opcional: anclar el control a la esquina superior izquierda para que se mantenga en su posición
+            // Opcional: anclar el control a la esquina superior izquierda para que se mantenga en su posiciï¿½n
             uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
             // Agrega el UserControl al panel
@@ -153,7 +153,7 @@ namespace WinFormsApp1
             // Ajusta el ancho del UserControl para que sea exactamente el mismo que el del panel
             uc.Width = panelContenedor.ClientSize.Width;
 
-            // Opcional: anclar el control a la esquina superior izquierda para que se mantenga en su posición
+            // Opcional: anclar el control a la esquina superior izquierda para que se mantenga en su posiciï¿½n
             uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
             // Agrega el UserControl al panel
@@ -204,6 +204,17 @@ namespace WinFormsApp1
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void validacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelContenedor.Controls.Clear();
+
+            ucValidaciones uc = new ucValidaciones();
+            uc.Width = panelContenedor.ClientSize.Width;
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            panelContenedor.Controls.Add(uc);
 
         }
     }
