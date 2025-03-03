@@ -130,7 +130,7 @@ namespace WinFormsApp1
 
         private async void modificarNivelButton_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 string idStr = idModificarNivelTextBox.Text.Trim();
@@ -187,6 +187,45 @@ namespace WinFormsApp1
             catch (Exception ex)
             {
                 MessageBox.Show("Error al modificar el nivel: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private async void eliminarNivelButton_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string nivelStr = eliminarNivelTextBox.Text.Trim();
+
+                if (string.IsNullOrEmpty(nivelStr))
+                {
+                    MessageBox.Show("El campo de 'nivel' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(nivelStr, out int nivel))
+                {
+                    MessageBox.Show("El valor ingresado en el campo de 'nivel' debe ser un número entero positivo.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string WSKey = Utils.obtenerRestKey();
+
+                NivelesApi nivelesApi = new NivelesApi();
+
+                InlineResponse2001 respuesta = await nivelesApi.BorrarNivelAsync(nivel, WSKey);
+
+
+                MessageBox.Show("Nivel borrado exitosamente. ",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al borrar el nivel: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

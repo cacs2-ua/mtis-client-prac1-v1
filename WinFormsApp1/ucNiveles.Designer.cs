@@ -220,6 +220,7 @@
             eliminarNivelButton.TabIndex = 116;
             eliminarNivelButton.Text = "Eliminar";
             eliminarNivelButton.UseVisualStyleBackColor = false;
+            eliminarNivelButton.Click += eliminarNivelButton_Click;
             // 
             // eliminarNivelTextBox
             // 
