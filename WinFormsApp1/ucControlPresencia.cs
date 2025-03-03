@@ -89,7 +89,7 @@ namespace WinFormsApp1
                 return;
             }
 
-             if (!int.TryParse(codigoSalaStr, out int codigoSala))
+            if (!int.TryParse(codigoSalaStr, out int codigoSala))
             {
                 MessageBox.Show("El 'codigoSala' debe de ser un número entero positivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -122,6 +122,59 @@ namespace WinFormsApp1
                 MessageBox.Show("Error en la llamada SOAP:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private async void eliminarButton_Click(object sender, EventArgs e)
+        {
+            string nifnie = NIFEliminarTextBox.Text.Trim();
+            string codigoSalaStr = codigoSalaEliminarTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(nifnie))
+            {
+                MessageBox.Show("El campo de consulta del 'NIF/NIE' no puede estar vacío.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(codigoSalaStr))
+            {
+                MessageBox.Show("El campo de consulta del 'codigoSala' no puede estar vacío.",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(codigoSalaStr, out int codigoSala))
+            {
+                MessageBox.Show("El 'codigoSala' debe de ser un número entero positivo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string WSKey = Utils.obtenerSoapKey();
+
+            var registro = new ControlPresenciaOperationType
+            {
+                nifnie = nifnie,
+                codigoSala = codigoSala
+            };
+
+            try
+            {
+                using (var client = new ControlPresenciaClient())
+                {
+                    var response = await client.eliminarAsync(registro, WSKey);
+
+                    if (Utils.ExisteErrorOAdvertencia(response.mensajeSalida))
+                    {
+                        return;
+                    }
+
+                    MessageBox.Show(response.mensajeSalida, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar registros de acceso:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

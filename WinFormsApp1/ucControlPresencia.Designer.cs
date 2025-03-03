@@ -161,6 +161,7 @@
             eliminarButton.TabIndex = 45;
             eliminarButton.Text = "Eliminar";
             eliminarButton.UseVisualStyleBackColor = false;
+            eliminarButton.Click += eliminarButton_Click;
             // 
             // label2
             // 
