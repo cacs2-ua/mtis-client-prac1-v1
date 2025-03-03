@@ -12,12 +12,17 @@ using ControlPresenciaSoapServiceReference;
 
 namespace WinFormsApp1
 {
-    public partial class ucSalas: UserControl
+    public partial class ucSalas : UserControl
     {
         public ucSalas()
         {
             InitializeComponent();
             Utils.ConfigurarDataGridView(consultarSalasDataGridView, this.BackColor);
+        }
+
+        private void consultarSalaButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
