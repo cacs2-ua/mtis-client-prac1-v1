@@ -181,6 +181,7 @@
             consultarDispositivoButton.TabIndex = 132;
             consultarDispositivoButton.Text = "Consultar";
             consultarDispositivoButton.UseVisualStyleBackColor = false;
+            consultarDispositivoButton.Click += consultarDispositivoButton_Click;
             // 
             // consultarDispositivoDataGridView
             // 
