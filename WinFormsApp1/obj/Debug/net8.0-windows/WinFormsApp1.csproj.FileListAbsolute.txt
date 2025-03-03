@@ -318,3 +318,4 @@ C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-clien
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucValidaciones.resources
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucSalas.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucDispositivos.resources

@@ -195,6 +195,12 @@ namespace WinFormsApp1
 
         private void dispositivosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelContenedor.Controls.Clear();
+
+            ucDispositivos uc = new ucDispositivos();
+            uc.Width = panelContenedor.ClientSize.Width;
+            uc.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            panelContenedor.Controls.Add(uc);
 
         }
 
