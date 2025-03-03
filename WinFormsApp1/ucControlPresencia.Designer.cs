@@ -107,6 +107,7 @@
             registrarButton.TabIndex = 31;
             registrarButton.Text = "Registrar";
             registrarButton.UseVisualStyleBackColor = false;
+            registrarButton.Click += registrarButton_Click;
             // 
             // codigoSalaLabel
             // 
