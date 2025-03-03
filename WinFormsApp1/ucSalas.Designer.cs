@@ -32,7 +32,7 @@
             label5 = new Label();
             modificarSalaButton = new Button();
             crearSalaButton = new Button();
-            label4 = new Label();
+            labelNN4 = new Label();
             codigoSalaModificarTextBox = new TextBox();
             label24 = new Label();
             consultarSalasDataGridView = new DataGridView();
@@ -97,16 +97,16 @@
             crearSalaButton.UseVisualStyleBackColor = false;
             crearSalaButton.Click += crearSalaButton_Click;
             // 
-            // label4
+            // labelNN4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 25.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Blue;
-            label4.Location = new Point(643, 63);
-            label4.Name = "label4";
-            label4.Size = new Size(332, 48);
-            label4.TabIndex = 103;
-            label4.Text = "Servicio \"Salas\"";
+            labelNN4.AutoSize = true;
+            labelNN4.Font = new Font("Microsoft Sans Serif", 25.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            labelNN4.ForeColor = Color.Blue;
+            labelNN4.Location = new Point(643, 63);
+            labelNN4.Name = "labelNN4";
+            labelNN4.Size = new Size(332, 48);
+            labelNN4.TabIndex = 103;
+            labelNN4.Text = "Servicio \"Salas\"";
             // 
             // codigoSalaModificarTextBox
             // 
@@ -319,7 +319,7 @@
             Controls.Add(label5);
             Controls.Add(modificarSalaButton);
             Controls.Add(crearSalaButton);
-            Controls.Add(label4);
+            Controls.Add(labelNN4);
             Controls.Add(codigoSalaModificarTextBox);
             Controls.Add(label24);
             Controls.Add(consultarSalasDataGridView);
@@ -356,7 +356,7 @@
         private Label label5;
         private Button modificarSalaButton;
         private Button crearSalaButton;
-        private Label label4;
+        private Label labelNN4;
         private TextBox codigoSalaModificarTextBox;
         private Label label24;
         private DataGridView consultarSalasDataGridView;
