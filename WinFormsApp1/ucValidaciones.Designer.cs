@@ -67,6 +67,7 @@
             nifValidarButton.TabIndex = 43;
             nifValidarButton.Text = "Validar";
             nifValidarButton.UseVisualStyleBackColor = false;
+            nifValidarButton.Click += nifValidarButton_Click;
             // 
             // nifConsultarLabel
             // 

@@ -61,6 +61,7 @@ namespace WinFormsApp1
                         controlPresenciaDataGridView.DataSource = response.empleadosOut.ToList();
                     }
 
+                    MessageBox.Show("Respuesta SOAP:\n" + response.mensajeSalida, "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
             }
