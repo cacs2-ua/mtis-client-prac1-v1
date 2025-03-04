@@ -147,11 +147,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20F);
             label1.ForeColor = Color.FromArgb(128, 128, 255);
-            label1.Location = new Point(695, 45);
+            label1.Location = new Point(908, 48);
             label1.Name = "label1";
-            label1.Size = new Size(312, 46);
+            label1.Size = new Size(249, 46);
             label1.TabIndex = 0;
-            label1.Text = "MTIS-Cliente-SOAP";
+            label1.Text = "MTIS Práctica 1";
             label1.Click += label1_Click_2;
             // 
             // Form1

@@ -244,9 +244,9 @@
             label3.ForeColor = Color.Blue;
             label3.Location = new Point(777, 73);
             label3.Name = "label3";
-            label3.Size = new Size(507, 48);
+            label3.Size = new Size(529, 48);
             label3.TabIndex = 25;
-            label3.Text = "Servicio \"ControlAcceso\"";
+            label3.Text = "Servicio \"ControlAccesos\"";
             // 
             // ucControlAccesos
             // 
