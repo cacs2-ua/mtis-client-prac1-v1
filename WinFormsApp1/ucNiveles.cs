@@ -40,6 +40,13 @@ namespace WinFormsApp1
                     return;
                 }
 
+                if (string.IsNullOrEmpty(descripcion))
+                {
+                    MessageBox.Show("El campo de consulta de 'descripcion' no puede estar vacío.",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 // Paso 3: Crear el objeto Nivel usando los valores recogidos.
                 // Nota: La clase Nivel requiere que "nivel" y "descripcion" no sean nulos.
                 IO.Swagger.Model.Nivel nuevoNivel = new IO.Swagger.Model.Nivel(1, nivelValue, descripcion);

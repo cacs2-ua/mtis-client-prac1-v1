@@ -30,7 +30,7 @@ namespace ServiceReference1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.example.org/ControlAccesos/")]
-    public partial class RegistroAccesosType
+    public partial class RegistroAccesosType : object, System.ComponentModel.INotifyPropertyChanged
     {
         
         private string nifnieField;
@@ -50,6 +50,7 @@ namespace ServiceReference1
             set
             {
                 this.nifnieField = value;
+                this.RaisePropertyChanged("nifnie");
             }
         }
         
@@ -64,6 +65,7 @@ namespace ServiceReference1
             set
             {
                 this.codigoSalaField = value;
+                this.RaisePropertyChanged("codigoSala");
             }
         }
         
@@ -78,6 +80,18 @@ namespace ServiceReference1
             set
             {
                 this.codigoDispositivoField = value;
+                this.RaisePropertyChanged("codigoDispositivo");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null))
+            {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -86,7 +100,7 @@ namespace ServiceReference1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.example.org/ControlAccesos/")]
-    public partial class InstanciaRegistroAccesosType
+    public partial class InstanciaRegistroAccesosType : object, System.ComponentModel.INotifyPropertyChanged
     {
         
         private int idField;
@@ -110,6 +124,7 @@ namespace ServiceReference1
             set
             {
                 this.idField = value;
+                this.RaisePropertyChanged("id");
             }
         }
         
@@ -124,6 +139,7 @@ namespace ServiceReference1
             set
             {
                 this.idEmpleadoField = value;
+                this.RaisePropertyChanged("idEmpleado");
             }
         }
         
@@ -138,6 +154,7 @@ namespace ServiceReference1
             set
             {
                 this.idSalaField = value;
+                this.RaisePropertyChanged("idSala");
             }
         }
         
@@ -152,6 +169,7 @@ namespace ServiceReference1
             set
             {
                 this.idDispositivoField = value;
+                this.RaisePropertyChanged("idDispositivo");
             }
         }
         
@@ -166,6 +184,18 @@ namespace ServiceReference1
             set
             {
                 this.fechaHoraField = value;
+                this.RaisePropertyChanged("fechaHora");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null))
+            {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
@@ -174,7 +204,7 @@ namespace ServiceReference1
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.example.org/ControlAccesos/")]
-    public partial class FechasRegistroAccesosType
+    public partial class FechasRegistroAccesosType : object, System.ComponentModel.INotifyPropertyChanged
     {
         
         private string nifnieField;
@@ -198,6 +228,7 @@ namespace ServiceReference1
             set
             {
                 this.nifnieField = value;
+                this.RaisePropertyChanged("nifnie");
             }
         }
         
@@ -212,6 +243,7 @@ namespace ServiceReference1
             set
             {
                 this.codigoSalaField = value;
+                this.RaisePropertyChanged("codigoSala");
             }
         }
         
@@ -226,6 +258,7 @@ namespace ServiceReference1
             set
             {
                 this.codigoDispositivoField = value;
+                this.RaisePropertyChanged("codigoDispositivo");
             }
         }
         
@@ -240,6 +273,7 @@ namespace ServiceReference1
             set
             {
                 this.fechaDesdeField = value;
+                this.RaisePropertyChanged("fechaDesde");
             }
         }
         
@@ -254,6 +288,18 @@ namespace ServiceReference1
             set
             {
                 this.fechaHastaField = value;
+                this.RaisePropertyChanged("fechaHasta");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null))
+            {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }

@@ -130,11 +130,11 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(1182, 495);
+            label21.Location = new Point(1173, 495);
             label21.Name = "label21";
-            label21.Size = new Size(40, 20);
+            label21.Size = new Size(56, 20);
             label21.TabIndex = 138;
-            label21.Text = "nivel";
+            label21.Text = "codigo";
             // 
             // label20
             // 

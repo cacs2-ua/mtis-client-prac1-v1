@@ -109,18 +109,6 @@ C:\Users\Cris-SX\source\repos\WinFormsApp1\WinFormsApp1\bin\Debug\net8.0-windows
 C:\Users\Cris-SX\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
 C:\Users\Cris-SX\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.sourcelink.json
 C:\Users\Cris-SX\source\repos\WinFormsApp1\WinFormsApp1\obj\Debug\net8.0-windows\WinForms.E4050A35.Up2Date
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Form1.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucControlAccesos.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucControlPresencia.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucEmpleados.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucNiveles.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.GenerateResource.cache
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfo.cs
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.sourcelink.json
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\bin\Debug\net8.0-windows\NUnit3.TestAdapter.dll
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\bin\Debug\net8.0-windows\NUnit3.TestAdapter.pdb
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\bin\Debug\net8.0-windows\nunit.engine.dll
@@ -310,13 +298,25 @@ C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-clien
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\bin\Debug\net8.0-windows\IO.Swagger.Test.pdb
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\bin\Debug\net8.0-windows\IO.Swagger.Test.dll.config
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\bin\Debug\net8.0-windows\IO.Swagger.pdb
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Form1.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucControlAccesos.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucControlPresencia.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucDispositivos.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucEmpleados.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucNiveles.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucNotificaciones.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucSalas.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucValidaciones.resources
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.sourcelink.json
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinForms.E4050A35.Up2Date
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.dll
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\refint\WinFormsApp1.dll
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucValidaciones.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucSalas.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucDispositivos.resources
-C:\Users\Cris-SX\Desktop\UA\Segundo Cuatri\MTIS\Practica\mine-spam\pruebas-cliente-net\cliente-soap-wsdl\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.ucNotificaciones.resources

@@ -38,7 +38,7 @@ namespace EmpleadosSoapServiceReference
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.2.0-preview1.23462.5")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.example.org/Empleados/")]
-    public partial class EmpleadosType
+    public partial class EmpleadosType : object, System.ComponentModel.INotifyPropertyChanged
     {
         
         private string nifnieField;
@@ -72,6 +72,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.nifnieField = value;
+                this.RaisePropertyChanged("nifnie");
             }
         }
         
@@ -86,6 +87,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.nombreApellidosField = value;
+                this.RaisePropertyChanged("nombreApellidos");
             }
         }
         
@@ -100,6 +102,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.emailField = value;
+                this.RaisePropertyChanged("email");
             }
         }
         
@@ -114,6 +117,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.nafField = value;
+                this.RaisePropertyChanged("naf");
             }
         }
         
@@ -128,6 +132,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.ibanField = value;
+                this.RaisePropertyChanged("iban");
             }
         }
         
@@ -142,6 +147,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.idNivelField = value;
+                this.RaisePropertyChanged("idNivel");
             }
         }
         
@@ -156,6 +162,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
             }
         }
         
@@ -170,6 +177,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.passwordField = value;
+                this.RaisePropertyChanged("password");
             }
         }
         
@@ -184,6 +192,7 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.validoField = value;
+                this.RaisePropertyChanged("valido");
             }
         }
         
@@ -198,6 +207,18 @@ namespace EmpleadosSoapServiceReference
             set
             {
                 this.idField = value;
+                this.RaisePropertyChanged("id");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null))
+            {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
