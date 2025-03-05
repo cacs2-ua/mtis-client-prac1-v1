@@ -64,7 +64,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al notificar presencia en sala: " + ex.Message,
+                MessageBox.Show("ERROR: El empleado introducido no es válido: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -103,7 +103,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al notificar presencia en sala: " + ex.Message,
+                MessageBox.Show("Error al notificar el error al empleado: " + ex.Message,
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
